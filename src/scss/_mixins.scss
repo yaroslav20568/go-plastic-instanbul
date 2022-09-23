@@ -1,0 +1,24 @@
+@mixin textStyle($font-size, $font-weight, $line-height, $font-family, $color) {
+	@if($font-size != $fs16) {
+		font-size: $font-size;
+	}
+	@if($font-weight != $fw400) {
+		font-weight: $font-weight;
+	}
+	@if($line-height != 1.375) {
+		line-height: $line-height;
+	}
+	@if($font-family != $ff_OpenSans) {
+		font-family: $font-family;
+	}
+	@if($color != $white) {
+		color: $color;
+	}
+}
+
+@mixin beforeAfterStyles($display, $width, $height, $content: "") {
+	content: $content;
+	display: $display;
+	width: $width;
+	height: $height;
+}

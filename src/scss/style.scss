@@ -1,0 +1,179 @@
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'mixins.scss';
+
+
+
+body {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
+	font-family: $rubik;
+	color: $black;
+	background-color: $white;
+}
+
+.container {
+	max-width: 1164px;
+	margin: 0 auto;
+	padding: 0 22px;
+}
+
+/* HEADER */
+.header {
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 14px 0;
+		position: relative;
+	}
+
+	&__logo {
+		&-link {
+		}
+
+		&-img {
+		}
+	}
+
+	&__widget-language {
+		position: relative;
+		cursor: pointer;
+		padding-right: 16px;
+
+		&:after {
+			content: "";
+			display: block;
+			background-image: url('@img/green-arrow.svg');
+			width: 12px;
+			height: 6px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&.active {
+			&:after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+
+	&-widget__language-text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.166;
+		color: $green;
+	}
+
+	&__nav {
+	}
+
+	&-nav {
+		&__list {
+			display: flex;
+		}
+
+		&__item {
+			margin-right: 30px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__link {
+			font-size: 16px;
+			line-height: 1.187;
+			color: $black;
+			transition: .3s linear color;
+
+			&:hover {
+				color: $green;
+			}
+		}
+
+		&__menu {
+			display: none;
+
+			&-item {
+			}
+		}
+	}
+
+	&__burger {
+		width: 30px;
+		height: 22px;
+		position: relative;
+		cursor: pointer;
+		display: none;
+
+		&-item {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $black;
+			position: absolute;
+			transition: .3s linear transform;
+
+			&:first-child {
+				top: 0;
+			}
+
+			&:nth-child(2) {
+				top: 10px;
+				width: 20px;
+			}
+
+			&:last-child {
+				bottom: 0;
+			}
+		}
+
+		&.active &-item:first-child {
+			transform: rotate(45deg);
+			top: 10px;
+		}
+
+		&.active &-item:nth-child(2) {
+			display: none;
+		}
+
+		&.active &-item:last-child {
+			transform: rotate(-45deg);
+			bottom: 10px;
+		}
+	}
+}
+/* HEADER */
+
+/* BTNS */
+.wrapper-btn--blue {
+	background-color: $light-blue;
+	border-radius: 10px;
+}
+
+.btn--blue {
+	background-color: $blue;
+	color: $white;
+	padding: 17px 26px;
+	border-radius: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.187;
+	transition: .3s linear transform;
+
+	&:hover {
+		transform: translate3d(4px, 4px, 0)
+	}
+}
+
+.stroke--blue {
+	border-bottom: 2px solid rgba(191, 213, 227, 0.7);
+}
+/* BTNS */
+
+@import "media.scss";
