@@ -150,7 +150,7 @@ body {
 }
 /* HEADER */
 
-/* BTNS */
+/* CUSTOM */
 .wrapper-btn--blue {
 	background-color: $light-blue;
 	border-radius: 10px;
@@ -174,6 +174,169 @@ body {
 .stroke--blue {
 	border-bottom: 2px solid rgba(191, 213, 227, 0.7);
 }
-/* BTNS */
+/* CUSTOM */
+
+.intro {
+	margin-top: 70px;
+}
+
+/* INTRO */
+.intro {
+	&__swiper {
+		padding-bottom: 40px !important;
+	}
+	&__swiper-wrapper {
+
+	}
+	&__swiper-slide {
+
+	}
+	&__slide-left {
+	}
+	&__slide-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		height: 100%;
+	}
+
+	&-slide {
+		&__subtitle {
+			font-size: 24px;
+			line-height: 1.166;
+			margin-bottom: 32px;
+		}
+
+		&__title {
+			max-width: 703px;
+			font-size: 86px;
+			line-height: 110%;
+			margin-bottom: 57px;
+		}
+
+		&__text {
+			max-width: 269px;
+			font-size: 16px;
+			line-height: 130%;
+			color: $grey;
+			margin-bottom: 154px;
+		}
+
+		&__link {
+			width: 90px;
+			height: 90px;
+			background-color: $green;
+			border-radius: 100%;
+			position: absolute;
+			left: -45px;
+			bottom: -40px;
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
+			}
+		}
+		// &__img {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	z-index: -1;
+		// 	height: 100%;
+		// }
+	}
+}
+/* INTRO */
+
+/* SWIPER */
+.swiper-pagination {
+	position: static !important;
+	text-align: left !important;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	width: 9px;
+	height: 9px;
+	background-color: $light-blue;
+	opacity: 1;
+	margin: 0 !important;
+	margin-right: 6px !important;
+
+	&:last-child {
+		margin-right: 0 !important;
+	}
+}
+
+.swiper-pagination-bullet-active {
+	width: 35px !important;
+	height: 9px !important;
+	background-color: $blue !important;
+	border-radius: 20px !important;
+}
+/* SWIPER */
+
+/* OUR-DIRECTIONS */
+.our-directions {
+	&__title {
+
+	}
+
+	&__swiper {
+
+	}
+
+	&__swiper-wrapper {
+
+	}
+
+	&__swiper-slide {
+
+	}
+
+	&__swiper-items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+
+	&__swiper-item {
+		width: 33.3333%;
+		padding: 0 10px;
+		margin-bottom: 40px;
+	}
+
+	&__item {
+		&-info {
+			margin-top: 15px;
+			display: flex;
+			// justify-content: space-between
+		}
+
+		&-left {
+			margin-right: 20px;
+		}
+
+		&-right {
+		}
+
+		&-img {
+		}
+
+		&-title {
+			font-size: 20px;
+			line-height: 1.2;
+		}
+		
+		&-link {
+			display: block;
+			width: 50px;
+			height: 50px;
+			background-color: $green;
+		}
+	}
+}
+/* OUR-DIRECTIONS */
 
 @import "media.scss";

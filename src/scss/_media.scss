@@ -15,17 +15,31 @@
 }
 
 @media(max-width: 870px) {
-	.header__nav {
-		display: none;
-	}
+	.header {
+		&__nav {
+			display: none;
+		}
 
-	.header__burger {
-		display: block;
+		&__wrapper-btn {
+			display: block;
+		}
+
+		&__burger {
+			display: block;
+		}
 	}
 }
 
 @media(max-width: 768px) {
+	.header {
+		&__wrapper-btn {
+			display: none;
+		}
+	}
+}
 
+@media(max-width: 650px) {
+	
 }
 
 @media(max-width: 576px) {

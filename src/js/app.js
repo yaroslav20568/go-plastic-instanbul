@@ -12,4 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     /* BURGER */
+
+    /* SWIPER */
+    const swiper = new Swiper('.intro__swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        pagination: {
+            el: '.intro-slide__navigation',
+            clickable: true
+        },
+    });
+    /* SWIPER */
 });
