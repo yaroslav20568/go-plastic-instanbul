@@ -166,6 +166,8 @@ body {
 .wrapper-btn--blue {
 	background-color: $light-blue;
 	border-radius: 10px;
+	text-align: center;
+	// display: inline-block;
 }
 
 .btn--blue {
@@ -395,5 +397,93 @@ body {
 	}
 }
 /* OUR-DIRECTIONS */
+
+/* ABOUT-COMPANY */
+.about-company {
+	position: relative;
+
+	&__background {
+		width: 85%;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		height: 373px;
+		background-color: $light;
+		border-radius: 0px 40px 40px 0px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 50px;
+	}
+
+	&__left {
+		padding-left: 94px;
+		margin-right: 115px;
+	}
+	&__right {
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: start;
+		height: 100%;
+	}
+
+	&__titles {
+
+	}
+	
+	&__img {
+		border-radius: 40px;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		// margin-bottom: 140px;
+
+		p {
+			line-height: 1.4;
+			display: flex;
+			align-items: center;
+			color: $dark-grey;
+			margin-bottom: 19px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		img {
+			display: none;
+			border-radius: 40px;
+		}
+	}
+
+	&__wrapper-link {
+
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 17px 41px;
+	}
+
+	&__wrapper-btn {
+		display: none;
+	}
+	
+	&__btn {
+		padding: 17px 10px;
+	}
+}
+/* ABOUT-COMPANY */
 
 @import "media.scss";
