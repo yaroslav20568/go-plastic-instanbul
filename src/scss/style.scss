@@ -486,4 +486,165 @@ body {
 }
 /* ABOUT-COMPANY */
 
+/* WHY-ARE-WE */
+.why-are-we {
+	position: relative;
+
+	&__title {
+
+	}
+
+	&__content {
+		display: flex;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -33px;
+		margin-bottom: -71px;
+	}
+
+	&__item {
+		padding: 0 33px;
+		width: 50%;
+		margin-bottom: 71px;
+		max-width: 486px;
+	}
+
+	&-item {
+		&__inner {
+			padding-left: 121px;
+			position: relative;
+		}
+
+		&__count {
+			width: 98px;
+			height: 98px;
+			background-color: $green;
+			background-color: rgba(121, 183, 58, 0.4);
+			border-radius: 100%;
+			position: absolute;
+			left: 0;
+
+			&:before {
+				content: "";
+				display: block;
+				width: 74px;
+				height: 74px;
+				background-color: $green;
+				border-radius: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
+			}
+
+			&-text {
+				font-weight: 600;
+				font-size: 36px;
+				line-height: 140%;
+				color: $white;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
+			}
+		}
+
+		&__info {
+		}
+
+		&__title {
+			font-size: 24px;
+			line-height: 140%;
+		}
+
+		&__text {
+			font-size: 16px;
+			line-height: 140%;
+			color: $grey;
+		}
+	}
+
+	&__big-circle {
+		width: 453px;
+		height: 453px;
+		background-color: $light-blue;
+		border-radius: 100%;
+		position: absolute;
+		right: 75px;
+		bottom: 42px;
+	}
+
+	&__small-circle {
+		width: 61px;
+		height: 61px;
+		background-color: $blue;
+		border-radius: 100%;
+		position: absolute;
+		right: 50px;
+		bottom: 211px;
+	}
+
+	&__background {
+		position: absolute;
+		z-index: -1;
+		right: 84px;
+		width: 632px;
+		height: 495px;
+		bottom: 0;
+
+		&-item {
+			position: absolute;
+			bottom: 0;
+			z-index: 100;
+			width: 632px;
+			height: 421px;
+			background-image: url('@img/why-are-we/background.png');
+		}
+	}
+}
+/* WHY-ARE-WE */
+
+/* STAGES-WORK */
+.stages-work {
+	&__title {
+
+	}
+
+	&__tabs {
+	}
+
+	&__tab {
+	}
+
+	&-tab {
+		&__title {
+			color: #707070;
+			margin-bottom: 26px;
+		}
+
+		&__img {
+			display: none;
+		}
+
+		&__text {
+			font-size: 16px;
+			line-height: 130%;
+			color: #B6B6B6;
+		}
+
+		&__count {
+			font-weight: 500;
+			font-size: 28px;
+			line-height: 1.178;
+			color: #B6B6B6;
+			margin-bottom: 15px;
+		}
+	}
+}
+/* STAGES-WORK */
+
+
 @import "media.scss";

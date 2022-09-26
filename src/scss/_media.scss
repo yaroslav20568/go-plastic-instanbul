@@ -4,6 +4,16 @@
 			width: 100%;
 		}
 	}
+
+	.why-are-we {
+		&__background {
+			display: none;
+		}
+
+		&__item {
+			max-width: none;
+		}
+	}
 }
 
 @media(max-width: 1200px) {
@@ -83,6 +93,12 @@
 	.header {
 		&__wrapper-btn {
 			display: none;
+		}
+	}
+
+	.why-are-we {
+		&__item {
+			width: 100%;
 		}
 	}
 }
