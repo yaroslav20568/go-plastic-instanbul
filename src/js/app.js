@@ -14,11 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
     /* BURGER */
 
     /* SWIPER */
-    const swiper = new Swiper('.intro__swiper', {
+    const introSwiper = new Swiper('.intro__swiper', {
         speed: 400,
         spaceBetween: 100,
         pagination: {
             el: '.intro-slide__navigation',
+            clickable: true
+        },
+    });
+
+    const ourDirectionsSwiper = new Swiper('.our-directions__swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        pagination: {
+            el: '.our-directions__slide-navigation',
             clickable: true
         },
     });

@@ -20,6 +20,18 @@ body {
 	padding: 0 22px;
 }
 
+/* SECTION */
+.section {
+	padding: 120px 0;	
+
+	&__title {
+		font-size: 36px;
+		line-height: 1.194;
+		margin-bottom: 50px;
+	}
+}
+/* SECTION */
+
 /* HEADER */
 .header {
 	&__inner {
@@ -173,6 +185,24 @@ body {
 
 .stroke--blue {
 	border-bottom: 2px solid rgba(191, 213, 227, 0.7);
+	width: 100%;
+	transition: .3s linear width;
+}
+
+.btn--learn-more {
+	display: block;
+	width: 90px;
+	height: 90px;
+	background-color: $green;
+	border-radius: 100%;
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
 }
 /* CUSTOM */
 
@@ -223,21 +253,26 @@ body {
 			margin-bottom: 154px;
 		}
 
+		// .btn--learn-more {
+		// 	display: block;
+		// 	width: 90px;
+		// 	height: 90px;
+		// 	background-color: $green;
+		// 	border-radius: 100%;
+		// 	position: relative;
+		
+		// 	img {
+		// 		position: absolute;
+		// 		top: 50%;
+		// 		left: 50%;
+		// 		transform: translate3d(-50%, -50%, 0);
+		// 	}
+		// }
+
 		&__link {
-			width: 90px;
-			height: 90px;
-			background-color: $green;
-			border-radius: 100%;
 			position: absolute;
 			left: -45px;
 			bottom: -40px;
-
-			img {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate3d(-50%, -50%, 0);
-			}
 		}
 		// &__img {
 		// 	position: absolute;
@@ -305,6 +340,10 @@ body {
 		width: 33.3333%;
 		padding: 0 10px;
 		margin-bottom: 40px;
+
+		&:hover .stroke--blue {
+			width: 170px;
+		}
 	}
 
 	&__item {
@@ -319,9 +358,13 @@ body {
 		}
 
 		&-right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 
 		&-img {
+			border-radius: 10px;
 		}
 
 		&-title {
@@ -334,7 +377,21 @@ body {
 			width: 50px;
 			height: 50px;
 			background-color: $green;
+			border-radius: 100%;
+			position: relative;
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0)
+			}
 		}
+	}
+
+	&__slide-navigation {
+		display: flex;
+		justify-content: center;
 	}
 }
 /* OUR-DIRECTIONS */
