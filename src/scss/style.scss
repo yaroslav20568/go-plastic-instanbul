@@ -167,6 +167,7 @@ body {
 	background-color: $light-blue;
 	border-radius: 10px;
 	text-align: center;
+	display: inline-block;
 	// display: inline-block;
 }
 
@@ -857,6 +858,127 @@ body {
 	}
 }
 /* REVIEWS */
+
+/* CONTACTS */
+.write-us {
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+
+	&__background {
+		width: 46%;
+		position: absolute;
+		z-index: -1;
+		top: 98px;
+		left: 0;
+		height: 528px;
+		background-color: $light;
+		border-radius: 0px 40px 40px 0px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__left {
+		// position: relative;
+		// width: 1107px;
+		// height: 626px;
+		width: 514px;
+		height: 581px;
+		margin-right: 165px;
+		margin-left: 100px;
+	}
+
+	&__right {
+		padding-top: 120px;
+		max-width: 360px;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		line-height: 140%;
+		color: #888888;
+		margin-bottom: 20px;
+	}
+
+	&__form {
+	}
+
+	&__form {
+		&-input {
+			// background: $white;
+			// border: 1px solid $black;
+			// border-radius: 10px;
+		}
+
+		&-textarea {
+			height: 120px;
+			resize: none;
+		}
+
+		&-input, &-textarea {
+			display: block;
+			width: 100%;
+
+			background: $white;
+			border: 1px solid $black;
+			border-radius: 10px;
+			padding: 14px 20px;
+			margin-bottom: 15px;
+
+			&::placeholder {
+				font-size: 16px;
+				line-height: 1.187;
+				color: #888888;
+			}
+		}
+
+		&-btn {
+			// margin-top: 30px;
+		}
+	}
+
+	&__wrapper-btn {
+		margin-top: 30px;
+	}
+	
+	&__form-btn {
+		padding: 17px 46px;
+		text-align: center;
+	}
+
+	&__background-img {
+		position: relative;
+	}
+
+	// &__big-circle {
+	// 	width: 514px;
+	// 	height: 514px;
+	// 	background-color: $light-blue;
+	// 	border-radius: 100%;
+	// 	position: absolute;
+	// 	z-index: -1;
+	// 	bottom: 0;
+	// 	left: 50%;
+	// 	transform: translateX(-50%)
+	// }
+
+	&__small-circle {
+		width: 74px;
+		height: 74px;
+		background-color: $green;
+		border-radius: 100%;
+		position: absolute;
+		left: 15px;
+		top: 134px;
+	}
+}
+/* CONTACTS */
 
 
 @import "media.scss";
