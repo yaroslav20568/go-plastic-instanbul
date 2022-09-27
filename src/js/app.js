@@ -40,6 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true
         },
     });
+
+    const blogSwiper = new Swiper('.blog__swiper', {
+        speed: 400,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 20,
+        pagination: {
+            el: '.blog__slide-navigation',
+            clickable: true
+        },
+    });
     /* SWIPER */
 
     /* ACCORDIONS */
