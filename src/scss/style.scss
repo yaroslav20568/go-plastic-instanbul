@@ -980,7 +980,7 @@ body {
 }
 /* CONTACTS */
 
-/* */
+/* BLOG */
 .blog {
 	&__title {
 
@@ -1063,7 +1063,69 @@ body {
 		}
 	}
 }
-/* */
+/* BLOG */
+
+/* FOOTER */
+.footer {
+	background-color: $dark-blue;
+
+	&__top {
+		padding: 56px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		width: 870px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__location {
+	}
+
+	&__phone {
+	}
+
+	&__email {
+	}
+
+	&__social {
+		width: 168px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-item {
+
+		}
+	}
+
+	&__location {
+		&-icon {
+		}
+
+		&-text {
+		}
+	}
+
+	&__phone {
+		&-icon {
+		}
+
+		-text {
+		}
+	}
+
+	&__email {
+		&-icon {
+		}
+
+		&-text {
+		}
+	}
+}
+/* FOOTER */
 
 
 @import "media.scss";
