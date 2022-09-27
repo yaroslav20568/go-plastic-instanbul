@@ -206,6 +206,26 @@ body {
 		transform: translate3d(-50%, -50%, 0);
 	}
 }
+
+.btn--circle--blue {
+	width: 43px;
+	height: 40px;
+	border: 2px solid $blue;
+	border-radius: 100%;
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		width: 20px;
+		height: 16px;
+		background-image: url('@img/arrow-right-blue.svg');
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+}
 /* CUSTOM */
 
 .intro {
@@ -614,9 +634,101 @@ body {
 	}
 
 	&__tabs {
+		display: flex;
 	}
 
 	&__tab {
+		height: 500px;
+		width: 18.2%;
+		cursor: pointer;
+
+		&-minor, &-main {
+			height: 100%;
+		}
+
+		&-minor {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			background: #FFFFFF;
+			border-width: 2px 2px 2px 0px;
+			border-style: solid;
+			border-color: #B6B6B6;
+			border-radius: 10px;
+
+			padding: 40px 9px 40px 24px;
+		}
+
+		&:first-child {
+			.stages-work__tab-minor {
+				border-width: 2px 2px 2px 2px;
+			}
+		}
+
+		&-main {
+			display: none;
+		}
+
+		&-info {
+		
+		}
+
+		&.active {
+			width: 45.4%;
+			cursor: auto;
+
+			// &:first-child {
+			// 	.stages-work__tab-minor {
+			// 		border-width: 2px 2px 2px 2px;
+			// 	}
+			// }
+
+			.stages-work__tab {
+				&-minor {
+					display: none;
+				}
+
+				&-main {
+					display: block;
+					padding: 40px 26px;
+					background: $blue;
+					// border: 3px solid $blue;
+					border-radius: 10px;
+				}
+			}
+
+			.stages-work-tab {
+				&__count {
+					font-weight: 500;
+					font-size: 32px;
+					line-height: 1.187;
+					color: $white;
+				}
+
+				&__title {
+					font-weight: 500;
+					font-size: 22px;
+					line-height: 140%;
+					display: flex;
+					align-items: center;
+					color: $white;
+					margin-bottom: 15px;
+				}
+
+				&__img {
+					max-width: 100%;
+					margin-bottom: 28px;
+				}
+
+				&__text {
+					p {
+						color: $white;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
 	}
 
 	&-tab {
@@ -626,13 +738,14 @@ body {
 		}
 
 		&__img {
-			display: none;
+			// display: none;
 		}
 
 		&__text {
 			font-size: 16px;
 			line-height: 130%;
 			color: #B6B6B6;
+			word-break: break-word;
 		}
 
 		&__count {
@@ -641,6 +754,10 @@ body {
 			line-height: 1.178;
 			color: #B6B6B6;
 			margin-bottom: 15px;
+		}
+
+		&__btn {
+
 		}
 	}
 }
