@@ -763,5 +763,100 @@ body {
 }
 /* STAGES-WORK */
 
+/* REVIEWS */
+.reviews {
+	&__wrapper {
+		position: relative;
+	}
+
+	&__inner {
+		// display: flex;
+	}
+
+	&__left {
+		max-width: 685px;
+	}
+
+	&__right {
+
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__swiper {
+		// max-width: 685px;
+
+		&-wrapper {
+
+		}
+
+		&-slide {
+
+		}
+	}
+
+	&__slide {
+		&-navigation {
+
+		}
+	}
+
+	&-slide {
+		&__left-inner {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		&-left {
+
+		}
+
+		&__info {
+		}
+
+		&__text {
+			// max-width: 685px;
+			line-height: 130%;
+			margin-bottom: 60px;
+
+			a {
+				color: #888888;
+			}
+		}
+
+		&__mark {
+			margin-left: -8px;
+			margin-right: 24px;
+		}
+
+		&__fio {
+			font-size: 20px;
+			line-height: 140%;
+			margin-bottom: 8px;
+		}
+
+		&__date {
+			font-size: 16px;
+			line-height: 140%;
+			color: #888888;
+		}
+	}
+
+	&__background {
+		position: absolute;
+		top: 0;
+		right: 191px;
+
+		img {
+			border-radius: 40px;
+			transform: matrix(-1, 0, 0, 1, 0, 0);
+		}
+	}
+}
+/* REVIEWS */
+
 
 @import "media.scss";

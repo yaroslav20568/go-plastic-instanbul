@@ -14,6 +14,16 @@
 			max-width: none;
 		}
 	}
+
+	.reviews {
+		&__background {
+			display: none;
+		}
+
+		&__left {
+			max-width: none;
+		}
+	}
 }
 
 @media(max-width: 1200px) {
@@ -115,7 +125,13 @@
 }
 
 @media(max-width: 576px) {
-    
+    .reviews {
+		&-slide {
+			&__text {
+				margin-bottom: 30px;
+			}
+		}
+	}
 }
 
 @media(max-width: 380px) {
@@ -148,6 +164,14 @@
 
 			img {
 				border-radius: 10px;
+			}
+		}
+	}
+	
+	.reviews {
+		&-slide {
+			&__mark {
+				margin-right: 20px;
 			}
 		}
 	}

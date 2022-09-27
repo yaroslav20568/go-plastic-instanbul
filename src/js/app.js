@@ -31,6 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true
         },
     });
+
+    const reviewsSwiper = new Swiper('.reviews__swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        pagination: {
+            el: '.reviews__slide-navigation',
+            clickable: true
+        },
+    });
     /* SWIPER */
 
     /* ACCORDIONS */
