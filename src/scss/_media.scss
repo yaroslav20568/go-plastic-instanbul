@@ -27,6 +27,12 @@
 		}
 	}
 
+	.stages-work {
+		&__background {
+			width: 100%;
+		}
+	}
+
 	.reviews {
 		&__background {
 			display: none;
@@ -211,6 +217,8 @@
 	}
 
 	.write-us {
+		overflow: hidden;
+
 		&__background {
 			height: 430px;
 
@@ -276,6 +284,10 @@
 			width: 100%;
 			margin-bottom: 50px;
 		}
+	}
+
+	.reviews {
+		padding: 120px 0 0;
 	}
 
 	.write-us {
@@ -362,6 +374,10 @@
 				margin-bottom: 10px;
 			}
 		}
+	}
+
+	.reviews {
+		padding: 100px 0 0;
 	}
 
 	.write-us {
@@ -549,6 +565,14 @@
 
 		&__item {
 			margin-bottom: 30px;
+		}
+	}
+
+	.stages-work {
+		padding: 40px 0;
+
+		&__background {
+			border-radius: 0px 10px 10px 0px;
 		}
 	}
 	

@@ -631,6 +631,19 @@ body {
 
 /* STAGES-WORK */
 .stages-work {
+	position: relative;
+
+	&__background {
+		width: 85%;
+		height: 100%;
+		background-color: $light;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		border-radius: 40px 0px 0px 40px;
+	}
+
 	&__title {
 
 	}
@@ -865,7 +878,7 @@ body {
 .write-us {
 	padding: 0;
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden;
 
 	&__background {
 		width: 46%;
