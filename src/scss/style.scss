@@ -342,7 +342,7 @@ body {
 	}
 
 	&__swiper {
-
+		
 	}
 
 	&__swiper-wrapper {
@@ -350,7 +350,16 @@ body {
 	}
 
 	&__swiper-slide {
+		margin-top: 0 !important;
+		margin-bottom: 40px;
 
+		&:hover .stroke--blue {
+			width: 170px;
+		}
+	}
+
+	.swiper-grid-column>.swiper-wrapper {
+		flex-direction: row;
 	}
 
 	&__swiper-items {
@@ -360,13 +369,13 @@ body {
 	}
 
 	&__swiper-item {
-		width: 33.3333%;
-		padding: 0 10px;
-		margin-bottom: 40px;
+		// width: 33.3333%;
+		// padding: 0 10px;
+		// margin-bottom: 40px;
 
-		&:hover .stroke--blue {
-			width: 170px;
-		}
+		// &:hover .stroke--blue {
+		// 	width: 170px;
+		// }
 	}
 
 	&__item {
