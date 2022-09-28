@@ -853,7 +853,7 @@ body {
 
 		img {
 			border-radius: 40px;
-			transform: matrix(-1, 0, 0, 1, 0, 0);
+			// transform: matrix(-1, 0, 0, 1, 0, 0);
 		}
 	}
 }
@@ -1101,8 +1101,28 @@ body {
 		}
 	}
 
-	&__location {
+	&__location, &__phone, &__email {
+		display: flex;
+		align-items: center;
+	}
+
+	&__location, &__phone, &__email {
+		&-text {
+			font-size: 16px;
+			line-height: 1.187;
+			color: #F2F8FE;
+		}
+
 		&-icon {
+			display: flex;
+		}
+	}
+
+	&__location {
+		align-items: start;
+
+		&-icon {
+			margin-right: 24px;
 		}
 
 		&-text {
@@ -1111,20 +1131,145 @@ body {
 
 	&__phone {
 		&-icon {
-		}
-
-		-text {
-		}
-	}
-
-	&__email {
-		&-icon {
+			margin-right: 19px;
 		}
 
 		&-text {
 		}
 	}
+
+	&__email {
+		&-icon {
+			margin-right: 17px;
+		}
+
+		&-text {
+		}
+	}
+
+	&__stroke {
+		border-bottom: 2px solid #3A638B;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 18px 0;
+	}
+
+	&__copyright {
+		font-size: 16px;
+		line-height: 1.187;
+		color: $light;
+	}
+
+	&__developed {
+		display: flex;
+		align-items: center;
+
+		&-text {
+			font-size: 16px;
+			line-height: 130%;
+			color: $light;
+			margin-right: 11px;
+		}
+
+		&-logo {
+		}
+	}
 }
+
+.footer {
+	&__center {
+		padding: 56px 0;
+		display: grid;
+		grid-template-columns: 67.1% 22.9%;
+		justify-content: space-between;
+	}
+
+	&__nav {
+		display: grid;
+		grid-template-columns: 19.1% 66.6%;
+		justify-content: space-between;
+
+		&-item {
+			&_list {
+			}
+		}
+	}
+
+	&-nav-item {
+		&__title {
+			font-weight: 500;
+			font-size: 20px;
+			color: $white;
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			&-columns {
+				display: grid;
+				grid-template-columns: 40.9% 45.5%;
+				justify-content: space-between;
+			}
+
+			&-inner {
+			}
+
+			&-left {
+			}
+
+			&-right {
+			}
+
+			&-item {
+				margin-bottom: 10px;
+			}
+
+			&-link {
+				font-size: 16px;
+				line-height: 1.187;
+				color: $light;
+				transition: .3s linear;
+
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&__opening-hours {
+		// justify-self: end;
+	}
+
+	&-opening-hours {
+		&__title {
+			font-weight: 500;
+			font-size: 20px;
+			color: $white;
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			&-item {
+				display: grid;
+				grid-template-columns: 1fr 0.77fr;
+				margin-bottom: 10px;
+			}
+		}
+
+		&__item {
+			&-day, &-hours {
+				font-size: 16px;
+				line-height: 1.187;
+				color: $light
+			}
+		}
+	}
+}
+
 /* FOOTER */
 
 
