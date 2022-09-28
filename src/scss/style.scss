@@ -637,10 +637,11 @@ body {
 
 	&__tabs {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__tab {
-		height: 500px;
+		min-height: 500px;
 		width: 18.2%;
 		// cursor: pointer;
 
