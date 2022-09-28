@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
     }
 
-    tabs.forEach((tab, index) => {
+    tabsBtns.forEach((tab, index) => {
         tab.addEventListener('click', () => {
             tabsRemoveActive();
             tabAddActive(index);

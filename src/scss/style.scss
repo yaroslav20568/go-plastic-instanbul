@@ -641,7 +641,7 @@ body {
 	&__tab {
 		height: 500px;
 		width: 18.2%;
-		cursor: pointer;
+		// cursor: pointer;
 
 		&-minor, &-main {
 			height: 100%;
@@ -945,11 +945,13 @@ body {
 
 	&__wrapper-btn {
 		margin-top: 30px;
+		margin-bottom: 4px;
 	}
 	
 	&__form-btn {
 		padding: 17px 46px;
 		text-align: center;
+		cursor: pointer;
 	}
 
 	&__background-img {
@@ -1101,6 +1103,14 @@ body {
 		}
 	}
 
+	&__phone, &__email {
+		transition: .3s linear color;
+
+		&:hover h5 {
+			color: $white;
+		}
+	}
+
 	&__location, &__phone, &__email {
 		display: flex;
 		align-items: center;
@@ -1111,6 +1121,7 @@ body {
 			font-size: 16px;
 			line-height: 1.187;
 			color: #F2F8FE;
+			transition: .3s linear color;
 		}
 
 		&-icon {
