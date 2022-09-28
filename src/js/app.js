@@ -50,6 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.blog__slide-navigation',
             clickable: true
         },
+        breakpoints: {
+            // when window width is >= 320px
+            0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1
+            },
+            600: {
+                slidesPerView: 2,
+                slidesPerGroup: 2
+            },
+            // when window width is >= 480px
+            992: {
+              slidesPerView: 2,
+              slidesPerGroup: 2
+
+            },
+            // when window width is >= 640px
+            1200: {
+              slidesPerView: 3,
+              slidesPerGroup: 3
+            }
+          }
     });
     /* SWIPER */
 
