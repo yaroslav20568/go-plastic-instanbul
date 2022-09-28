@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             0: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
-                slidesPerGroup: 1,
                 grid: {
                     rows: 1
                 },
