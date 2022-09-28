@@ -54,6 +54,21 @@
 			display: none;
 		}
 	}
+
+	.footer {
+		&__top {
+			display: block;
+		}
+
+		&__info {
+			width: 100%;
+			margin-bottom: 25px;
+		}
+
+		&__center {
+			grid-template-columns: 67.1% 26.9%;
+		}
+	}
 }
 
 @media(max-width: 992px) {
@@ -104,6 +119,32 @@
 			padding-top: 100px;
 		}
 	}
+
+	.footer {
+		&__center {
+			grid-template-columns: 1fr;
+		}
+
+		&__nav {
+			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 35px;
+			column-gap: 20px;
+		}
+
+		&-nav-item__list {
+			column-gap: 20px;
+		}
+
+		&-nav-item__list-column {
+			display: grid;
+			grid-template-columns: 40.9% 45.5%;
+			justify-content: space-between;
+		}
+
+		&__opening-hours {
+			width: 46%;
+		}
+	}
 }
 
 @media(max-width: 870px) {
@@ -127,6 +168,39 @@
 
 			&-img {
 				margin-top: 40px;
+			}
+		}
+	}
+
+	.footer {
+		&__top {
+			display: flex;
+		}
+
+		&__info, &__social {
+			width: auto;
+		}
+
+		&__info {
+			display: block;
+			margin-bottom: 0;
+		}
+
+		&__location, &__phone, &__email {
+			margin-bottom: 25px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__social {
+			&-item {
+				margin-right: 15px;
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 		}
 	}
@@ -182,6 +256,51 @@
 	.write-us {
 		padding: 0;
 	}
+
+	.footer {
+		&__nav {
+			grid-template-columns: 1fr;
+		}
+
+		&__nav-item {
+			margin-bottom: 35px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-nav-item {
+			&__title {
+				margin-bottom: 15px;
+			}
+		}
+
+		&-opening-hours {
+			&__title {
+				margin-bottom: 15px;
+			}
+		}
+
+		&__opening-hours {
+			width: 96%;
+		}
+
+		&__bottom {
+			flex-direction: column;
+			padding: 30px 0 50px;
+		}
+
+		&__copyright {
+			margin-bottom: 30px;
+		}
+
+		&__developed {
+			&-text {
+				margin-right: 5px;
+			}
+		}
+	}
 }
 
 @media(max-width: 576px) {
@@ -190,6 +309,34 @@
 			&__text {
 				margin-bottom: 30px;
 			}
+		}
+	}
+
+	.footer {
+		&__top {
+			display: block;
+			padding: 50px 0 30px;
+		}
+
+		&__info {
+			margin-bottom: 25px;
+		}
+
+		&__social {
+			justify-content: start;
+			padding: 0 10px;
+		}
+
+		&__center {
+			padding: 35px 0 30px;
+		}
+	}
+}
+
+@media(max-width: 480px) {
+	.footer {
+		&-nav-item__list-columns {
+			grid-template-columns: 1fr;
 		}
 	}
 }
@@ -239,6 +386,12 @@
 	.write-us {
 		&__text {
 			font-size: 16px;
+		}
+	}
+
+	.footer {
+		&__social {
+			justify-content: space-between;
 		}
 	}
 }
