@@ -6,7 +6,19 @@
 	}
 
 	.why-are-we {
-		&__background {
+		// &__background {
+		// 	display: none;
+		// }
+		
+		&__big-circle {
+			display: none;
+		}
+
+		&__small-circle {
+			display: none;
+		}
+
+		&__background-item {
 			display: none;
 		}
 
@@ -33,6 +45,26 @@
 			margin-right: 50px;
 		}
     }
+
+	.why-are-we {
+		&__background {
+			left: 0;
+			height: 100%;
+			right: 0;
+			width: auto;
+		}
+
+		&__big-circle {
+			display: block;
+			width: 504px;
+			height: 504px;
+			background-color: $light;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -252px;
+		}
+	}
 
    .write-us {
 		&__left {
@@ -226,6 +258,7 @@
 	.why-are-we {
 		&__item {
 			width: 100%;
+			margin-bottom: 50px;
 		}
 	}
 
@@ -410,6 +443,44 @@
 			img {
 				border-radius: 10px;
 			}
+		}
+	}
+
+	.why-are-we {
+		&-item {
+			&__inner {
+				padding-left: 0;
+			}
+
+			&__top {
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+
+			&__title {
+				max-width: 164px;
+			}
+
+			&__count {
+				width: 92px;
+				height: 92px;
+				position: relative;
+				margin-right: 15px;
+
+				&:before {
+					width: 65px;
+					height: 65px;
+				}
+
+				&-text {
+					font-size: 32px;
+				}
+			}
+		}
+
+		&__item {
+			margin-bottom: 30px;
 		}
 	}
 	
