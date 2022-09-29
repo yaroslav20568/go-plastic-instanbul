@@ -3,15 +3,66 @@ import { animations } from './functions/animations.js';
 document.addEventListener('DOMContentLoaded', () => {
 	/* BURGER */
     const burgerBtn = document.querySelector('.header__burger');
+    const burgerMenu = document.querySelector('.burger-menu');
 
     burgerBtn.addEventListener('click', () => {
         if(burgerBtn.classList.contains('active')) {
-            burgerBtn.classList.remove('active')
+            burgerBtn.classList.remove('active');
+            burgerMenu.style.display = 'none';
+            document.body.style.overflow = 'auto';
         } else {
-            burgerBtn.classList.add('active')
+            burgerBtn.classList.add('active');
+            burgerMenu.style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
     });
+
+
     /* BURGER */
+    window.addEventListener('resize', () => {
+        if(document.body.clientWidth > 900) {
+            burgerBtn.classList.remove('active');
+            burgerMenu.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    /* NAV */
+    const navLinks = document.querySelectorAll('.header-nav__link');
+
+    navLinks.forEach(navLink => {
+        if(navLink.nextElementSibling) {
+            navLink.classList.add('have-children');
+        }
+
+        // navLink.addEventListener('mouseover', () => {
+        //     if(navLink.nextElementSibling) {
+        //         navLink.nextElementSibling.classList.add('active');
+        //     }
+        // });
+
+        // navLink.addEventListener('mouseout', () => {
+        //     if(navLink.nextElementSibling) {
+        //         navLink.nextElementSibling.classList.remove('active');
+        //     }
+        // });
+    })
+
+    const burgerImgs = document.querySelectorAll('.burger-menu__img');
+
+    burgerImgs.forEach(burgerImg => {
+        burgerImg.addEventListener('click', () => {
+            if(burgerImg.parentElement.nextElementSibling.classList.contains('active')) {
+                burgerImg.parentElement.nextElementSibling.classList.remove('active');
+                burgerImg.parentElement.classList.remove('active');
+                burgerImg.parentElement.nextElementSibling.style.display = 'none';
+            } else {
+                burgerImg.parentElement.nextElementSibling.classList.add('active');
+                burgerImg.parentElement.classList.add('active');
+                burgerImg.parentElement.nextElementSibling.style.display = 'block';
+            }
+        });
+    })
+    /* NAV */
 
     /* SWIPER */
     const introSwiper = new Swiper('.intro__swiper', {
