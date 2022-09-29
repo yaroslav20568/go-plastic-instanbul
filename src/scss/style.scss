@@ -1502,8 +1502,8 @@ body {
 }
 /*	BREADCRUMBS */
 
-/* HAIR-TRANSPLANTATION */
-.hair-transplantation {
+/* HAIR-TRANSPLANTATION-ITEM */
+.hair-transplantation-item {
 	padding: 0 0 50px 0;
 
 	&__inner {
@@ -1534,8 +1534,106 @@ body {
 	}
 
 	&__img {
+		border-radius: 10px;
 	}
 }
-/* HAIR-TRANSPLANTATION */
+/* HAIR-TRANSPLANTATION-ITEM */
+
+/* HAIR-TRANSPLANTATION-INFO */
+.hair-transplantation-info {
+	padding: 50px 0;
+	position: relative;
+
+	&__background {
+		width: 1522px;
+		height: 100%;
+		background-color: #F2F8FE;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		border-radius: 0px 40px 40px 0px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__imgs {
+	}
+
+	&__texts {
+		max-width: 550px;
+	}
+
+	&__img {
+		margin-bottom: 43px;
+
+		&:last-child {
+			border-radius: 10px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		&-item {
+			margin-bottom: 35px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-title {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		&-paragraph {
+			color: $dark-grey;
+		}
+	}
+}
+/* HAIR-TRANSPLANTATION-INFO */
+
+/* HAIR-TRANSPLANTATION-STEPS */
+.hair-transplantation-steps {
+	padding-top: 50px;
+
+	&__items {
+		display: flex;
+		margin: 0 -10px;
+	}
+
+	&__item {
+		width: 33.3333%;
+		padding: 0 10px;
+
+		&-top {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		&-text {
+			color: $grey;
+		}
+
+		&-count {
+			font-weight: 600;
+			font-size: 36px;
+			line-height: 1.194;
+			color: $green;
+			margin-right: 25px;
+		}
+
+		&-title {
+			font-size: 20px;
+		}
+	}
+}
+/* HAIR-TRANSPLANTATION-STEPS */
+
 
 @import "media.scss";
