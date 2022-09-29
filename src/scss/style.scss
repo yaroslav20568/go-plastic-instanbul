@@ -1481,8 +1481,61 @@ body {
 		}
 	}
 }
-
 /* FOOTER */
 
+/*	BREADCRUMBS */
+.breadcrumbs {
+	&__inner {
+		display: flex;
+		padding: 40px 0 60px;
+	}
+
+	&__link, &__delimiter, &__current {
+		font-size: 16px;
+		line-height: 1.187;
+		color: #B6B6B6;
+	}
+
+	&__delimiter {
+		margin: 0 6px;
+	}
+}
+/*	BREADCRUMBS */
+
+/* HAIR-TRANSPLANTATION */
+.hair-transplantation {
+	padding: 0 0 50px 0;
+
+	&__inner {
+		display: flex;
+		// align-items: center;
+		justify-content: space-between;
+	}
+
+	&__info {
+		max-width: 645px;
+	}
+
+	&__title {
+		margin-bottom: 35px;
+	}
+
+	&__text {
+		p {
+			font-size: 18px;
+			line-height: 120%;
+			color: $grey;
+			margin-bottom: 19px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__img {
+	}
+}
+/* HAIR-TRANSPLANTATION */
 
 @import "media.scss";
