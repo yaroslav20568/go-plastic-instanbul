@@ -426,6 +426,25 @@ body {
 		}
 	}
 }
+
+.group {
+	&__btns {
+		display: flex;
+		align-items: center;
+	}
+
+	&__wrapper-btn {
+		margin-right: 40px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__btn {
+
+	}
+}
 /* CUSTOM */
 
 /* INTRO */
@@ -1550,7 +1569,25 @@ body {
 
 /* HAIR-TRANSPLANTATION-ITEM */
 .hair-transplantation-item {
-	padding: 0 0 50px 0;
+	&--fue {
+		padding: 0 0 50px 0;
+	}
+
+	&--dhi {
+		padding: 120px 0;
+	}
+
+	&--eyebrows-beards {
+		padding: 0 0 120px;
+	}
+
+	&--eyebrows-beards {
+
+	}
+
+	&--content-right {
+
+	}
 
 	&__inner {
 		display: flex;
@@ -1560,6 +1597,9 @@ body {
 
 	&__info {
 		max-width: 645px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__title {
@@ -1688,20 +1728,24 @@ body {
 		}
 	}
 
-	&__btns {
-		display: flex;
-		align-items: center;
-	}
+	// &__btns {
+	// 	display: flex;
+	// 	align-items: center;
+	// }
 
-	&__wrapper-btn {
-		margin-right: 40px;
+	// &__wrapper-btn {
+	// 	margin-right: 40px;
 
-		&:last-child {
-			margin-right: 0;
-		}
-	}
+	// 	&:last-child {
+	// 		margin-right: 0;
+	// 	}
+	// }
 }
 /* HAIR-TRANSPLANTATION-STEPS */
+
+
+
+
 
 
 @import "media.scss";

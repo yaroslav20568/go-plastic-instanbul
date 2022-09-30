@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ACCORDIONS-BTNS */
 // const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps__btn');
-const accordeonBtns = document.querySelectorAll('.btn--circle--green');
+const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps .btn--circle--green');
 const accordeonItemTexts = document.querySelectorAll('.hair-transplantation-steps__item-text');
 const accordeonItemTops = document.querySelectorAll('.hair-transplantation-steps__item-top');
 

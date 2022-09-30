@@ -192,8 +192,20 @@
 			align-items: center;
 		}
 
-		&__info {
-			margin-right: 40px;
+		&__btns {
+			margin-top: 20px;
+		}
+
+		&--content-left {
+			.hair-transplantation-item__info {
+				margin-right: 40px;
+			}
+		}
+
+		&--content-right {
+			.hair-transplantation-item__img {
+				margin-right: 40px;
+			}
 		}
 	}
 }
@@ -310,6 +322,22 @@
 		&__burger {
 			display: block;
 			order: 1;
+		}
+	}
+
+	.hair-transplantation-item {
+		&__btns {
+			flex-direction: column;
+			align-items: start;
+		}
+
+		&__wrapper-btn {
+			margin-bottom: 20px;
+
+			&:first-child {
+				order: 1;
+				margin: 0;
+			}
 		}
 	}
 }
@@ -451,8 +479,23 @@
 			display: block;
 		}
 
-		&__info {
-			margin-bottom: 30px;
+		&--content-left {
+			.hair-transplantation-item__info {
+				max-width: none;
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+		}
+
+		&--content-right {
+			.hair-transplantation-item__info {
+				max-width: none;
+			}
+
+			.hair-transplantation-item__img {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
 		}
 
 		&__img {
@@ -575,6 +618,25 @@
 			}
 		}
 	}
+
+	.hair-transplantation-item {
+		&--dhi {
+			padding: 100px 0;
+		}
+	
+		&--eyebrows-beards {
+			padding: 0 0 100px;
+		}
+	}
+
+	.hair-transplantation-steps {
+		&__item {
+			&-count {
+				font-size: 32px;
+				line-height: 1.187;
+			}
+		}
+	}
 }
 
 @media(max-width: 600px) {
@@ -667,7 +729,7 @@
 		}
 	}
 
-	.hair-transplantation-steps {
+	.group {
 		&__btns {
 			flex-direction: column;
 			align-items: start;
