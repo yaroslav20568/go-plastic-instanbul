@@ -1743,7 +1743,112 @@ body {
 }
 /* HAIR-TRANSPLANTATION-STEPS */
 
+/* PLASTIC-SURGERY */
+.plastic-surgery {
+	&__background {
+	}
+	&__tabs {
+		&-navigation {
+			display: flex;
+			justify-content: end;
+		}
+		&-content {
+		}
+	}
+	&__tab {
+	}
+	&-tabs {
+		&__btn {
+			background: $light;
+			border-width: 1px 1px 1px 1px;
+			border-style: solid;
+			border-color: $light-blue;
+			border-radius: 10px 10px 0px 0px;
+			padding: 14px 13px 14px 18px;
 
+			display: flex;
+    		align-items: center;
+
+			&:hover {
+				.plastic-surgery-tabs-btn__text {
+					color: #484848;
+				}
+			}
+		}
+		&-btn {
+			&__text {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 1.197;
+				color: $grey;
+				margin-right: 11px;
+				transition: .3s linear color;
+			}
+			// &__icon {
+			// 	width: 20px;
+			// 	height: 20px;
+			// 	border: 1px solid $light-blue;
+			// 	border-radius: 100%;
+			// }
+		}
+		&-tabs__btn {
+		}
+	}
+	&-tab {
+		&__title {
+			font-size: 36px;
+			line-height: 1.194;
+			background: $light;
+			border-radius: 0px 0px 10px 0px;
+			padding: 15px 0;
+			margin-bottom: 35px;
+		}
+	}
+
+	&__children-tabs {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-children {
+		&__tabs-navigation {
+			
+		}
+		&__tabs-content {
+			max-width: 741px;
+		}
+		&__tab {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-tab {
+			&__text {
+				color: $grey;
+			}
+		}
+		&__text {
+		}
+		&__img {
+		}
+		&-tabs__btn {
+			font-size: 18px;
+			line-height: 120%;
+			display: block;
+			font-weight: 500;
+			color: $grey;
+			margin-bottom: 15px;
+
+			&.active {
+				color: $green;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+/* PLASTIC-SURGERY */
 
 
 

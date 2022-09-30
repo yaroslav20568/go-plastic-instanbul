@@ -219,3 +219,12 @@ accordeonBtns.forEach(accordeonBtn => {
     });
 });
 /* ACCORDIONS-BTNS */
+
+/* TABS */
+const tabsBtns = document.querySelectorAll('.class="plastic-surgery-tabs__btn');
+const tabs = document.querySelector('.plastic-surgery__tab');
+
+tabsBtns.forEach((tabsBtn, index) => {
+    tabs
+});
+/* TABS */
