@@ -194,3 +194,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     /* ACCORDIONS */
 });
+
+/* ACCORDIONS-BTNS */
+// const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps__btn');
+const accordeonBtns = document.querySelectorAll('.btn--circle--green');
+const accordeonItemTexts = document.querySelectorAll('.hair-transplantation-steps__item-text');
+const accordeonItemTops = document.querySelectorAll('.hair-transplantation-steps__item-top');
+
+accordeonBtns.forEach(accordeonBtn => {
+    accordeonBtn.addEventListener('click', () => {
+        if(accordeonBtn.classList.contains('active')) {
+            accordeonBtn.classList.remove('active');
+            accordeonBtn.previousElementSibling.textContent = 'Развернуть';
+            accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.classList.remove('show'));
+            accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.style.maxHeight = 0);
+            accordeonItemTops.forEach(accordeonItemTop => accordeonItemTop.style.marginBottom = 0);
+        } else {
+            accordeonBtn.classList.add('active');
+            accordeonBtn.previousElementSibling.textContent = 'Свернуть';
+            accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.classList.add('show'));
+            accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.style.maxHeight = accordeonItemText.scrollHeight + 'px');
+            accordeonItemTops.forEach(accordeonItemTop => accordeonItemTop.style.marginBottom = '20px');
+        }
+    });
+});
+/* ACCORDIONS-BTNS */

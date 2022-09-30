@@ -359,6 +359,17 @@
 			}
 		}
 	}
+
+	.hair-transplantation-steps {
+		&__item {
+			width: 100%;
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 @media(max-width: 800px) {
@@ -652,6 +663,22 @@
 
 			&:last-child {
 				margin-bottom: 0;
+			}
+		}
+	}
+
+	.hair-transplantation-steps {
+		&__btns {
+			flex-direction: column;
+			align-items: start;
+		}
+
+		&__wrapper-btn {
+			margin-bottom: 20px;
+
+			&:first-child {
+				order: 1;
+				margin: 0;
 			}
 		}
 	}
