@@ -252,9 +252,11 @@ const returnRootTabs = (tabs, index) => {
     showTab(childrenTabs, childrenTabsBtns, 0, 'flex');
 
     childrenTabsBtns.forEach((childrenTabsBtn, index) => {
-        childrenTabsBtn.addEventListener('click', () => {
-            showTab(childrenTabs, childrenTabsBtns, index, 'flex');
-        });
+        if(childrenTabsBtn.classList[0] === 'plastic-surgery-tabs__btn' || childrenTabsBtn.classList[0] === 'plastic-surgery-children-tabs__btn') {
+            childrenTabsBtn.addEventListener('click', () => {
+                showTab(childrenTabs, childrenTabsBtns, index, 'flex');
+            });
+        }
     });
 };
 

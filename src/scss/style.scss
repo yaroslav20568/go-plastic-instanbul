@@ -1816,12 +1816,24 @@ body {
 		}
 
 		&__title {
+			display: inline-block;
 			font-size: 36px;
 			line-height: 1.194;
 			// background: $light;
 			// border-radius: 0px 0px 10px 0px;
 			padding: 15px 0;
 			margin-bottom: 35px;
+			position: relative;
+			
+			&:before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 3px;
+				background-color: $green;
+				position: absolute;
+				top: -3px;
+			}
 		}
 	}
 
