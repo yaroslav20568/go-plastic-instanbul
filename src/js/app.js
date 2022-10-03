@@ -162,6 +162,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    const clinicsSwiper = new Swiper('.partner-clinics__swiper', {
+        speed: 400,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
+        pagination: {
+            el: '.partner-clinics__slide-navigation',
+            clickable: true
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1
+            },
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2
+            }
+        }
+    });
     /* SWIPER */
 
     /* ACCORDIONS */

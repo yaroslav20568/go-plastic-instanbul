@@ -1919,7 +1919,42 @@ body {
 }
 /* PLASTIC-SURGERY */
 
+/* PARTNER-CLINICS */
+.partner-clinics {
+	&__title {
 
+	}
+	&__swiper {
+
+	}
+	&__swiper-wrapper {
+
+	}
+	&__slide-navigation {
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+	}
+	&__swiper-slide {
+
+	}
+	&__item {
+		&-img {
+			max-width: 100%;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		&-title {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+		&-text {
+			font-size: 20px;
+			color: $grey;
+		}
+	}
+}
+/* PARTNER-CLINICS */
 
 
 @import "media.scss";
