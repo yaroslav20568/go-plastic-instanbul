@@ -1,7 +1,15 @@
 @media(min-width: 1920px) {
 	.hair-transplantation-info {
 		&__background {
-			width: 79%;
+			width: 79.5%;
+		}
+	}
+
+	.plastic-surgery {
+		&-tab {
+			&__background {
+				width: 79.5%;
+			}
 		}
 	}
 }
@@ -54,6 +62,14 @@
 	.hair-transplantation-info {
 		&__background {
 			width: 100%;
+		}
+	}
+
+	.plastic-surgery {
+		&-tab {
+			&__background {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -208,6 +224,18 @@
 			}
 		}
 	}
+
+	.plastic-surgery {
+		&-children {
+			&__wrapper-tabs-navigation + &__tabs-content {
+				max-width: 650px;
+			}
+
+			&-tab__info {
+				margin-right: 20px;
+			}
+		}
+	}
 }
 
 @media(max-width: 992px) {
@@ -307,6 +335,44 @@
 			margin-left: 0;
 		}
 	}
+
+	.plastic-surgery {
+		&__children-tabs {
+			display: block;
+		}
+
+		&-children {
+			&__wrapper-tabs-navigation {
+				flex-direction: row;
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+
+			// &__wrapper-tabs-navigation + &__tabs-content {
+			// 	.plastic-surgery-children-tab__info {
+			// 		margin-right: 118px;
+			// 	}
+			// }
+
+			&__tabs-navigation {
+				margin-bottom: 20px;
+			}
+
+			&__tabs-content {
+				max-width: none !important;
+			}
+
+			&-tab {
+				&__wrapper-btn {
+					margin-right: 39px;
+				}
+
+				&__info {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
 }
 
 @media(max-width: 900px) {
@@ -395,6 +461,26 @@
 
 			&:last-child {
 				margin-bottom: 0;
+			}
+		}
+	}
+
+	.plastic-surgery {
+		&-children {
+			&__tab {
+				flex-direction: column;
+				align-items: start;
+			}
+
+			&-tab {
+				&__info {
+					order: 1;
+					margin-right: 0;
+				}
+
+				&__img {
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}
@@ -500,6 +586,28 @@
 
 		&__img {
 			max-width: 100%;
+		}
+	}
+
+	.plastic-surgery {
+		&__tabs-navigation {
+			justify-content: start;
+			flex-wrap: wrap;
+		}
+
+		&-tabs {
+			&__btn {
+				width: 50%;
+				justify-content: space-between;
+
+				&:nth-child(3) {
+					border-width: 0px 1px 1px 1px
+				}
+
+				&:nth-child(4) {
+					border-width: 0px 1px 1px 0px
+				}
+			}
 		}
 	}
 }
@@ -637,6 +745,14 @@
 			}
 		}
 	}
+
+	.plastic-surgery {
+		&-children {
+			&__wrapper-tabs-navigation {
+				display: block;
+			}
+		}
+	}
 }
 
 @media(max-width: 600px) {
@@ -744,12 +860,32 @@
 			}
 		}
 	}
+
+	.btn--circle--green__wrapper-btn {
+
+	}
 }
 
 @media(max-width: 480px) {
 	.footer {
 		&-nav-item__list-columns {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	.plastic-surgery {
+		&-tabs {
+			&__btn {
+				width: 100%;
+
+				&:nth-child(2) {
+					border-width: 0px 1px 1px 1px;
+				}
+
+				&:nth-child(4) {
+					border-width: 0px 1px 1px 1px;
+				}
+			}
 		}
 	}
 }

@@ -102,6 +102,7 @@ body {
 			line-height: 1.187;
 			color: $black;
 			transition: .3s linear color;
+			padding: 22px 0;
 
 			&.have-children {
 				position: relative;
@@ -158,10 +159,15 @@ body {
 			grid-template-columns: repeat(4, 1fr);
 			gap: 40px 40px;
 
-			&.active {
+			&:hover {
 				opacity: 1;
 				z-index: 100;
 			}
+
+			// &.active {
+			// 	opacity: 1;
+			// 	z-index: 100;
+			// }
 
 			&-item {
 			}
@@ -1655,9 +1661,9 @@ body {
 
 	&__img {
 		margin-bottom: 43px;
+		border-radius: 10px;
 
 		&:last-child {
-			border-radius: 10px;
 			margin-bottom: 0;
 		}
 	}
@@ -1760,7 +1766,7 @@ body {
 	&-tabs {
 		&__btn {
 			background: $light;
-			border-width: 1px 1px 1px 1px;
+			border-width: 1px 1px 1px 0px;
 			border-style: solid;
 			border-color: $light-blue;
 			border-radius: 10px 10px 0px 0px;
@@ -1768,6 +1774,10 @@ body {
 
 			display: flex;
     		align-items: center;
+
+			&:first-child {
+				border-width: 1px 1px 1px 1px;
+			}
 
 			&:hover {
 				.plastic-surgery-tabs-btn__text {
@@ -1795,11 +1805,21 @@ body {
 		}
 	}
 	&-tab {
+		&__background {
+			position: absolute;
+			left: 0;
+			z-index: -1;
+			width: 1522px;
+			height: 72px;
+			background: $light;
+			border-radius: 0px 0px 10px 0px;
+		}
+
 		&__title {
 			font-size: 36px;
 			line-height: 1.194;
-			background: $light;
-			border-radius: 0px 0px 10px 0px;
+			// background: $light;
+			// border-radius: 0px 0px 10px 0px;
 			padding: 15px 0;
 			margin-bottom: 35px;
 		}
@@ -1814,21 +1834,51 @@ body {
 		&__tabs-navigation {
 			
 		}
-		&__tabs-content {
+		&__wrapper-tabs-navigation {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: start;
+			margin-right: 40px;
+		}
+		&__wrapper-tabs-navigation + &__tabs-content {
 			max-width: 741px;
+		}
+		&__wrapper-tabs-navigation + &__tabs-content {
+			.plastic-surgery-children-tab__info {
+				margin-right: 20px;
+			}
+		}
+		&__tabs-content {
+			// max-width: 741px;
 		}
 		&__tab {
 			display: flex;
 			justify-content: space-between;
 		}
 		&-tab {
+			&__wrapper-btn {
+				margin-right: 134px;
+			}
+
 			&__text {
 				color: $grey;
+				margin-bottom: 20px;
+			}
+
+			&__info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				margin-right: 118px;
+			}
+
+			&__img {
+				border-radius: 10px;
+				object-fit: cover;
 			}
 		}
 		&__text {
-		}
-		&__img {
 		}
 		&-tabs__btn {
 			font-size: 18px;
@@ -1837,6 +1887,25 @@ body {
 			font-weight: 500;
 			color: $grey;
 			margin-bottom: 15px;
+			text-align: left;
+			padding-right: 19px;
+			position: relative;
+			transition: .3s linear color;
+
+			&:hover {
+				color: #484848;
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				width: 9px;
+				height: 12px;
+				background-image: url('@img/green-arrow-right.vg.svg');
+				position: absolute;
+				top: 5px;
+				right: 0;
+			}
 
 			&.active {
 				color: $green;

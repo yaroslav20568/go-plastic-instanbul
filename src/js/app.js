@@ -221,10 +221,51 @@ accordeonBtns.forEach(accordeonBtn => {
 /* ACCORDIONS-BTNS */
 
 /* TABS */
-const tabsBtns = document.querySelectorAll('.class="plastic-surgery-tabs__btn');
-const tabs = document.querySelector('.plastic-surgery__tab');
+const returnRootTabs = (tabs, index) => {
+    const childrenTabsBtns = Array.from(tabs[index].lastElementChild.firstElementChild.firstElementChild.children);
+    const childrenTabs = Array.from(tabs[index].lastElementChild.lastElementChild.children);
+    console.log(childrenTabsBtns);
+    console.log(childrenTabs);
 
-tabsBtns.forEach((tabsBtn, index) => {
-    tabs
-});
+    showTab(childrenTabs, childrenTabsBtns, 0, 'flex');
+
+    childrenTabsBtns.forEach((childrenTabsBtn, index) => {
+        childrenTabsBtn.addEventListener('click', () => {
+            showTab(childrenTabs, childrenTabsBtns, index, 'flex');
+        });
+    });
+};
+
+const hideTabs = (tabs, tabsBtns) => {
+    tabsBtns.forEach(tabsBtn => tabsBtn.classList.remove('active'));
+    tabs.forEach(tab => tab.style.display = 'none');
+}
+
+const showTab = (tabs, tabsBtns, i, displayValue) => {
+    hideTabs(tabs, tabsBtns);
+    tabsBtns[i].classList.add('active');
+    tabs[i].style.display = displayValue;
+}
+
+const tabsFunc = (btnsClass, tabsClass) => {
+    const tabsBtns = document.querySelectorAll(`.${btnsClass}`);
+    const tabs = document.querySelectorAll(`.${tabsClass}`);
+    
+    // console.log(tabsBtns);
+    // console.log(tabs);
+    
+    showTab(tabs, tabsBtns, 0, 'block');
+    returnRootTabs(tabs, 0);
+    
+    tabsBtns.forEach((tabsBtn, index) => {
+        tabsBtn.addEventListener('click', () => {
+            showTab(tabs, tabsBtns, index, 'block');
+            returnRootTabs(tabs, index);
+        });
+    });
+};
+
+tabsFunc('plastic-surgery-tabs__btn', 'plastic-surgery__tab');
+
+// tabsFunc('plastic-surgery-children-tabs__btn', 'plastic-surgery-children__tab');
 /* TABS */
