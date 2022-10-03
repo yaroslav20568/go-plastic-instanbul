@@ -753,6 +753,20 @@
 			}
 		}
 	}
+
+	.services-prices {
+		padding-bottom: 100px;
+
+		&-item {
+			&__header {
+				padding-left: 40px;
+			}
+
+			&__elems {
+				padding: 15px 10px;
+			}
+		}
+	}
 }
 
 @media(max-width: 600px) {
@@ -1050,6 +1064,14 @@
 	.breadcrumbs {
 		&__inner {
 			padding: 40px 0 50px;
+		}
+	}
+
+	.services-prices {
+		&-item__elem {
+			&-title {
+				max-width: 140px;
+			}
 		}
 	}
 }

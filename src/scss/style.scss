@@ -1956,5 +1956,96 @@ body {
 }
 /* PARTNER-CLINICS */
 
+/* SERVICES-PRICES */
+.services-prices {
+	padding-bottom: 120px;
+
+	&__title {
+
+	}
+	&__items {
+
+	}
+	&__item {
+		padding-left: 25px;
+
+		&:first-child {
+			.services-prices-item__header {
+				border-radius: 10px 10px 0px 0px;
+			}
+		}
+
+		&:last-child {
+			.services-prices-item__elems {
+				border-bottom: 2px solid $blue;
+			}
+		}
+	}
+	&-item {
+		&__header {
+			background: $blue;
+			padding: 26px 0;
+			padding-left: 66px;
+			position: relative;
+		}
+		&__count {
+			width: 49px;
+			height: 49px;
+			background-color: $green;
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			// font-weight: 600;
+			// font-size: 20px;
+			// color: $white;
+
+			position: absolute;
+			left: -25px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&__count, &__title {
+			font-weight: 600;
+			font-size: 20px;
+			color: $white;
+		}
+		&__title {
+			
+		}
+		&__elems {
+			border-left: 2px solid $blue;
+			border-right: 2px solid $blue;
+			padding: 36px 126px 36px 66px;
+			// padding-left: 66px;
+		}
+		&__elem {
+			// display: flex;
+			// justify-content: space-between;
+			// align-items: center;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 25px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&-title {
+				max-width: 273px;
+				margin-right: 40px;
+			}
+
+			&-subtitle {
+				font-weight: 500;
+				color: $green;
+				justify-self: end;
+			}
+		}
+	}
+}
+/* SERVICES-PRICES */
+
 
 @import "media.scss";
