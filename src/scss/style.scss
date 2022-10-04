@@ -345,6 +345,29 @@ body {
 	}
 }
 
+.wrapper-btn--light-blue {
+	background-color: $blue;
+	border-radius: 10px;
+	text-align: center;
+	display: inline-block;
+	// display: inline-block;
+}
+
+.btn--light-blue {
+	background-color: $light;
+	color: $black;
+	padding: 17px 26px;
+	border-radius: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.187;
+	transition: .3s linear transform;
+
+	&:hover {
+		transform: translate3d(-4px, -4px, 0)
+	}
+}
+
 .stroke--blue {
 	border-bottom: 2px solid rgba(191, 213, 227, 0.7);
 	width: 100%;
@@ -2059,7 +2082,7 @@ body {
 }
 /* SERVICES-PRICES */
 
-/* CONTACTS */
+/* CONTACTS-INFO */
 .contacts-info {
 	position: relative;
 
@@ -2234,7 +2257,90 @@ body {
 		}
 	}
 }
-/* CONTACTS */
+/* CONTACTS-INFO */
+
+/* CONTACTS-FEEDBACK */
+.contacts-feedback {
+	position: relative;
+
+	&__background {
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		right: 0;
+		width: 90%;
+		height: 382px;
+		background-color: $light;
+		border-radius: 40px 0 0 40px;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+	&__left {
+		width: 540px;
+		height: 378px;
+		margin-right: 115px;
+		position: relative;
+	}
+	&__right {
+		max-width: 455px;
+		background-color: $blue;
+		padding: 50px 50px 50px 45px;
+		border-radius: 10px;
+	}
+	&__img {
+		max-width: 100%;
+		border-radius: 10px;
+		position: absolute;
+		left: -80px;
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 1.166;
+		color: $white;
+		margin-bottom: 15px;
+	}
+	&__text {
+		color: $light;
+		margin-bottom: 30px;
+	}
+	&__form {
+	}
+	&-form {
+		&__input, &__textarea, &__submit {
+			display: block;
+		}
+		&__input, &__textarea {
+			width: 100%;
+			background-color: $white;
+			border-radius: 10px;
+			margin-bottom: 15px;
+			padding: 13px 20px;
+			font-size: 16px;
+			line-height: 1.187;
+
+			&::placeholder {
+				color: $grey;
+			}
+		}
+		&__input {
+			height: 47px;
+		}
+		&__textarea {
+			height: 120px;
+		}
+		&__wrapper-btn {
+			margin-top: 40px;
+		}
+		&__btn {
+			padding: 17px 47px;
+		}
+	}
+	
+}
+/* CONTACTS-FEEDBACK */
 
 
 @import "media.scss";
