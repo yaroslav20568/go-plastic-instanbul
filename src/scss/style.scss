@@ -2416,6 +2416,7 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -10px;
+		margin-bottom: -20px;
 	}
 	&__title {
 		margin-bottom: 35px;
@@ -2495,7 +2496,73 @@ body {
 		}
 	}
 }
-/* ABOUT-US-CONNECTION */
+/* ABOUT-US-COMFORT */
+
+/* */
+.about-us-comfort {
+	&__background {
+	}
+	&__title {
+
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		margin-bottom: -20px;
+	}
+	&__item {
+		display: flex;
+		margin-bottom: 20px;
+		width: 50%;
+		position: relative;
+		padding: 0 10px;
+	}
+
+	&-item {
+		&__left {
+			// width: 78px;
+			padding-left: 78px;
+			background: #0061AD;
+			border-radius: 10px 0px 0px 10px;
+			margin-left: 41px;
+		}
+
+		&__right {
+			border: 2px solid #0061AD;
+			border-left: none;
+			border-radius: 0 10px 10px 0;
+			padding: 30px 43px;
+			width: 100%;
+		}
+
+		&__count {
+			width: 81px;
+			height: 81px;
+			background-color: $green;
+			border-radius: 100%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			font-weight: 600;
+			font-size: 32px;
+			line-height: 1.187;
+			color: $white;
+
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__text {
+			color: #515151;
+		}
+	}
+}
+/* ABOUT-US-COMFORT */
 
 
 @import "media.scss";

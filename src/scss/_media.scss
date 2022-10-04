@@ -627,6 +627,16 @@
 			margin-bottom: 30px;
 		}
 	}
+
+	.about-us-comfort {
+		&__items {
+			flex-direction: column;
+		}
+
+		&__item {
+			width: 100%;
+		}
+	}
 }
 
 @media(max-width: 800px) {
@@ -1114,6 +1124,47 @@
 				&:nth-child(4) {
 					border-width: 0px 1px 1px 1px;
 				}
+			}
+		}
+	}
+
+	.about-us-comfort {
+		&__item {
+			display: block;
+			margin-top: 41px;
+
+			&:nth-child(2) {
+				order: 1;
+			}
+			&:nth-child(4) {
+				order: 2;
+			}
+		}
+
+		&-item {
+			&__left {
+				width: 100%;
+				padding-left: 0;
+				padding-top: 66px;
+				margin-left: 0;
+				border-radius: 10px 10px 0px 0px;
+			}
+
+			&__right {
+				border-left: 2px solid $blue;
+				border-radius: 0px 0px 10px 10px;
+				padding: 30px;
+				min-height: 155px;
+			}
+
+			&__count {
+				top: 0;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
+			}
+
+			&__text {
+				font-size: 16px;
 			}
 		}
 	}
