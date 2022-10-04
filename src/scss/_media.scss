@@ -1116,6 +1116,20 @@
 			width: 100%;
 		}
 	}
+
+	.about-us-feedback {
+		background-image: none;
+		background-color: $light;
+
+		&__inner {
+			display: block;
+		}
+
+		&__right {
+			max-width: none;
+			padding: 0;
+		}
+	}
 }
 
 @media(max-width: 480px) {
