@@ -2336,11 +2336,68 @@ body {
 		}
 		&__btn {
 			padding: 17px 47px;
+			cursor: pointer;
 		}
 	}
 	
 }
 /* CONTACTS-FEEDBACK */
+
+/* ABOUT-US-COMPANY */
+.about-us-company {
+	position: relative;
+	overflow: hidden;
+
+	&__background {
+		width: 60%;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		height: 373px;
+		background-color: #F2F8FE;
+		border-radius: 0px 40px 40px 0px;
+	}
+
+	&__inner {
+		padding-top: 40px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 40px;
+
+		&-left {
+			max-width: 683px;
+			margin-right: 58px;
+		}
+		&-right {
+			max-width: 437px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__bottom {
+	}
+	&__title {
+		margin-bottom: 35px;
+	}
+	&__text {
+		color: #515151;
+	}
+	&__link {
+
+	}
+	&__img {
+		border-radius: 10px;
+		max-width: 100%;
+	}
+}
+/* ABOUT-US-COMPANY */
+
 
 
 @import "media.scss";
