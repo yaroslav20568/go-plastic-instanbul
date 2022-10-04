@@ -2500,10 +2500,20 @@ body {
 
 /* */
 .about-us-comfort {
-	&__background {
-	}
-	&__title {
+	position: relative;
 
+	&__background {
+		position: absolute;
+		left: 0;
+		z-index: -1;
+		width: 1522px;
+		height: 72px;
+		background: #F2F8FE;
+		border-radius: 0px 10px 10px 0px;
+	}
+
+	&__title {
+		padding: 14px 0;
 	}
 	&__items {
 		display: flex;
