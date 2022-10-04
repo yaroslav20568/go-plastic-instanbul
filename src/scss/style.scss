@@ -2061,6 +2061,19 @@ body {
 
 /* CONTACTS */
 .contacts-info {
+	position: relative;
+
+	&__background {
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 90%;
+		height: 90%;
+		background-color: $light;
+		border-radius: 0px 40px 40px 0px;
+	}
+
 	&__inner {
 		display: grid;
 		grid-template-columns: 23.6% 32.5% 23.9%;
@@ -2070,6 +2083,12 @@ body {
 	&__left {
 	}
 	&__center {
+		border-radius: 10px;
+		overflow: hidden;
+
+		iframe {
+			width: 100%;
+		}
 	}
 	&__right {
 		justify-self: end;
@@ -2079,7 +2098,7 @@ body {
 	&__social {
 		display: flex;
 		justify-content: space-between;
-		padding: 30px 0;
+		padding: 30px 0 0 0;
 
 		&-link {
 		}
