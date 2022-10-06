@@ -293,3 +293,23 @@ tabsFunc('plastic-surgery-tabs__btn', 'plastic-surgery__tab');
 
 // tabsFunc('plastic-surgery-children-tabs__btn', 'plastic-surgery-children__tab');
 /* TABS */
+
+/* SERVICES-ACCORDEON */
+const accordeonServicesBtns = document.querySelectorAll('.services-prices-item__btn');
+const accordeonServicesContents = document.querySelectorAll('.services-prices-item__elems');
+
+accordeonServicesBtns.forEach((accordeonServicesBtn, index) => {
+    accordeonServicesBtn.addEventListener('click', () => {
+        if(accordeonServicesBtn.classList.contains('active')) {
+            accordeonServicesBtn.classList.remove('active');
+            accordeonServicesContents[index].classList.remove('active');
+            accordeonServicesContents[index].style.maxHeight = 0;
+        } else {
+            accordeonServicesBtn.classList.add('active');
+            accordeonServicesContents[index].classList.add('active');
+            accordeonServicesContents[index].style.maxHeight = accordeonServicesContents[index].scrollHeight + 'px';
+        }
+    });
+})
+
+/* SERVICES-ACCORDEON */

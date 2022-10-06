@@ -2654,6 +2654,90 @@ body {
 }
 /* ABOUT-US-FEEDBACK */
 
+/* SERVICES-PRICES */
+.services-prices {
+	padding: 0 0 120px 0;
+
+	&__title {
+	}
+	&__items {
+	}
+	&__item {
+		&:last-child {
+			.services-prices-item__header {
+				border-bottom: 2px solid $light-blue;
+			}
+
+			.services-prices-item__elems {
+				&.active {
+					border-top: none;
+					border-bottom: 2px solid $light-blue;
+				}
+			}
+		}
+	}
+	&-item {
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 31px 96px;
+			border-top: 2px solid $light-blue;
+			// border-bottom: 2px solid $light-blue;
+		}
+		&__elems {
+			// display: none;
+			max-height: 0;
+			// position: absolute;
+			opacity: 0;
+			padding: 0;
+			background-color: #F2F8FE;
+			// padding: 33px 96px;
+			// padding: 0 96px;
+			transition: .3s linear;
+
+			&.active {
+				// display: block;
+				// padding: 33px 96px;
+				opacity: 1;
+				border-top: 2px solid $light-blue;
+
+				.services-prices-item__elems-inner {
+					position: static;
+				}
+			}
+		}
+		&__elems-inner {
+			padding: 33px 96px;
+			position: absolute;
+		}
+		&__title {
+			font-size: 20px;
+		}
+		&__btn {
+
+		}
+		&__elem {
+			max-width: 708px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&-title {
+				color: $dark-grey;
+			}
+			&-subtitle {
+			}
+		}
+	}
+	
+}
+/* SERVICES-PRICES */
 
 
 @import "media.scss";
