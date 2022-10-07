@@ -778,8 +778,12 @@
 					border-width: 0px 1px 1px 0px
 				}
 			}
+			
+			&__btn-green {
+				width: 50%;
+			}
 		}
-	}
+	}	
 
 	.services-prices {
 		&-item {
@@ -1167,6 +1171,10 @@
 				&:nth-child(4) {
 					border-width: 0px 1px 1px 1px;
 				}
+			}
+
+			&__btn-green {
+				width: 100%;
 			}
 		}
 	}

@@ -1773,7 +1773,7 @@ body {
 }
 /* MEDICAL-STEPS */
 
-/* PLASTIC-SURGERY */
+/* TAB-SECTION */
 .tab-section {
 	&__background {
 	}
@@ -1782,6 +1782,22 @@ body {
 			display: flex;
 			justify-content: end;
 		}
+		&-navigation-green {
+			display: flex;
+			flex-wrap: wrap;
+			
+			// .tab-section-tabs__btn {
+			// 	flex-grow: 1;
+			// }
+
+			// .tab-section-tabs__btn {
+			// 	border-style: none;
+			// 	border-radius: 0;
+			// 	border-color: none;
+			// 	background: none;
+			// }
+		}
+
 		&-content {
 		}
 	}
@@ -1825,7 +1841,25 @@ body {
 			// 	border-radius: 100%;
 			// }
 		}
-		&-tabs__btn {
+		&__btn-green {
+			flex-grow: 1;
+			padding: 24px 10px;
+
+			&.active {
+				border-bottom: 3px solid $green;
+
+				.tab-section-tabs-btn__text-green {
+					color: $black;
+				}
+			}
+		}
+		&-btn {
+			&__text-green {
+				font-size: 20px;
+				line-height: 24px;
+				color: $grey;
+
+			}
 		}
 	}
 	&-tab {
@@ -1846,30 +1880,28 @@ body {
 			// background: $light;
 			// border-radius: 0px 0px 10px 0px;
 			padding: 15px 0;
-			margin-bottom: 35px;
+			// margin-bottom: 35px;
 			position: relative;
 			
-			&:before {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 3px;
-				background-color: $green;
-				position: absolute;
-				top: -3px;
-			}
+			// &:before {
+			// 	content: "";
+			// 	display: block;
+			// 	width: 100%;
+			// 	height: 3px;
+			// 	background-color: $green;
+			// 	position: absolute;
+			// 	top: -3px;
+			// }
 		}
 	}
 
 	&__children-tabs {
 		display: flex;
 		justify-content: space-between;
+		padding-top: 35px;
 	}
 
 	&-children {
-		&__tabs-navigation {
-			
-		}
 		&__wrapper-tabs-navigation {
 			display: flex;
 			flex-direction: column;
@@ -1953,7 +1985,79 @@ body {
 		}
 	}
 }
+/* TAB-SECTION */
+
 /* PLASTIC-SURGERY */
+.plastic-surgery {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* PLASTIC-SURGERY */
+
+/* HAIR-TRANSPLANTATION */
+.hair-transplantation {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* HAIR-TRANSPLANTATION */
+
+/* BARIATRICS */
+.bariatrics {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* BARIATRICS */
+
+/* DENTISTRY */
+.dentistry {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* DENTISTRY */
+
+/* REPRODUCTIVE-MEDICINE */
+.reproductive-medicine {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* REPRODUCTIVE-MEDICINE */
+
+/* ORGAN-TRASPLANTATION */
+.organ-trasplantation {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* ORGAN-TRASPLANTATION */
+
+/* ONCOLOGY */
+.oncology {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* ONCOLOGY */
+
+/* ORTHOPEDICS */
+.orthopedics {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* ORTHOPEDICS */
+
+/* LASER-VISION-CORRECTION */
+.laser-vision-correction {
+	&__title {
+		margin-bottom: 35px;
+	}
+}
+/* LASER-VISION-CORRECTION */
 
 /* PARTNER-CLINICS */
 .partner-clinics {

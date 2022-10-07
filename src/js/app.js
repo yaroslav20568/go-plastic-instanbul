@@ -243,16 +243,16 @@ accordeonBtns.forEach(accordeonBtn => {
 /* ACCORDIONS-BTNS */
 
 /* TABS */
-const returnRootTabs = (tabs, index) => {
+const returnRootTabs = (tabs, index, sectionClass) => {
     const childrenTabsBtns = Array.from(tabs[index].lastElementChild.firstElementChild.firstElementChild.children);
     const childrenTabs = Array.from(tabs[index].lastElementChild.lastElementChild.children);
-    console.log(childrenTabsBtns);
-    console.log(childrenTabs);
+    // console.log(childrenTabsBtns);
+    // console.log(childrenTabs);
 
     showTab(childrenTabs, childrenTabsBtns, 0, 'flex');
 
     childrenTabsBtns.forEach((childrenTabsBtn, index) => {
-        if(childrenTabsBtn.classList[0] === 'plastic-surgery-tabs__btn' || childrenTabsBtn.classList[0] === 'plastic-surgery-children-tabs__btn') {
+        if(childrenTabsBtn.classList[0] === `${sectionClass}-tabs__btn` || childrenTabsBtn.classList[0] === `${sectionClass}-children-tabs__btn`) {
             childrenTabsBtn.addEventListener('click', () => {
                 showTab(childrenTabs, childrenTabsBtns, index, 'flex');
             });
@@ -271,25 +271,35 @@ const showTab = (tabs, tabsBtns, i, displayValue) => {
     tabs[i].style.display = displayValue;
 }
 
-const tabsFunc = (btnsClass, tabsClass) => {
+const tabsFunc = (sectionClass, btnsClass, tabsClass) => {
     const tabsBtns = document.querySelectorAll(`.${btnsClass}`);
     const tabs = document.querySelectorAll(`.${tabsClass}`);
+    console.log(btnsClass);
     
     // console.log(tabsBtns);
     // console.log(tabs);
     
     showTab(tabs, tabsBtns, 0, 'block');
-    returnRootTabs(tabs, 0);
+    returnRootTabs(tabs, 0, sectionClass);
     
     tabsBtns.forEach((tabsBtn, index) => {
         tabsBtn.addEventListener('click', () => {
             showTab(tabs, tabsBtns, index, 'block');
-            returnRootTabs(tabs, index);
+            returnRootTabs(tabs, index, sectionClass);
         });
     });
 };
 
-tabsFunc('plastic-surgery-tabs__btn', 'plastic-surgery__tab');
+tabsFunc('plastic-surgery', 'plastic-surgery-tabs__btn', 'plastic-surgery__tab');
+tabsFunc('hair-transplantation', 'hair-transplantation-tabs__btn', 'hair-transplantation__tab');
+tabsFunc('bariatrics', 'bariatrics-tabs__btn', 'bariatrics__tab');
+tabsFunc('dentistry', 'dentistry-tabs__btn', 'dentistry__tab');
+tabsFunc('reproductive-medicine', 'reproductive-medicine-tabs__btn', 'reproductive-medicine__tab');
+tabsFunc('dentistry', 'dentistry-tabs__btn', 'dentistry__tab');
+tabsFunc('organ-trasplantation', 'organ-trasplantation-tabs__btn', 'organ-trasplantation__tab');
+tabsFunc('oncology', 'oncology-tabs__btn', 'oncology__tab');
+tabsFunc('orthopedics', 'orthopedics-tabs__btn', 'orthopedics__tab');
+tabsFunc('laser-vision-correction', 'laser-vision-correction-tabs__btn', 'laser-vision-correction__tab');
 
 // tabsFunc('plastic-surgery-children-tabs__btn', 'plastic-surgery-children__tab');
 /* TABS */
