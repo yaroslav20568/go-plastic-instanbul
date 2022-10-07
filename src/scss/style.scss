@@ -1713,8 +1713,8 @@ body {
 }
 /* HAIR-TRANSPLANTATION-INFO */
 
-/* HAIR-TRANSPLANTATION-STEPS */
-.hair-transplantation-steps {
+/* MEDICAL-STEPS */
+.medical-steps {
 	padding-top: 50px;
 
 	&__items {
@@ -1771,7 +1771,7 @@ body {
 	// 	}
 	// }
 }
-/* HAIR-TRANSPLANTATION-STEPS */
+/* MEDICAL-STEPS */
 
 /* PLASTIC-SURGERY */
 .plastic-surgery {
@@ -2663,6 +2663,9 @@ body {
 	&__items {
 	}
 	&__item {
+		position: relative;
+		overflow: hidden;
+
 		&:last-child {
 			.services-prices-item__header {
 				border-bottom: 2px solid $light-blue;
@@ -2689,27 +2692,27 @@ body {
 			// display: none;
 			max-height: 0;
 			// position: absolute;
-			opacity: 0;
+			// opacity: 0;
 			padding: 0;
 			background-color: #F2F8FE;
 			// padding: 33px 96px;
 			// padding: 0 96px;
-			transition: .3s linear;
+			transition: .3s linear max-height, .3s linear border-top;
 
 			&.active {
 				// display: block;
 				// padding: 33px 96px;
-				opacity: 1;
+				// opacity: 1;
 				border-top: 2px solid $light-blue;
 
 				.services-prices-item__elems-inner {
-					position: static;
+					// position: static;
 				}
 			}
 		}
 		&__elems-inner {
 			padding: 33px 96px;
-			position: absolute;
+			// position: absolute;
 		}
 		&__title {
 			font-size: 20px;
@@ -2729,7 +2732,9 @@ body {
 			}
 
 			&-title {
+				max-width: 273px;
 				color: $dark-grey;
+				margin-right: 30px;
 			}
 			&-subtitle {
 			}

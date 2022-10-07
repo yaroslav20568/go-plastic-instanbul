@@ -219,9 +219,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ACCORDIONS-BTNS */
 // const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps__btn');
-const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps .btn--circle--green');
-const accordeonItemTexts = document.querySelectorAll('.hair-transplantation-steps__item-text');
-const accordeonItemTops = document.querySelectorAll('.hair-transplantation-steps__item-top');
+const accordeonBtns = document.querySelectorAll('.medical-steps .btn--circle--green');
+const accordeonItemTexts = document.querySelectorAll('.medical-steps__item-text');
+const accordeonItemTops = document.querySelectorAll('.medical-steps__item-top');
 
 accordeonBtns.forEach(accordeonBtn => {
     accordeonBtn.addEventListener('click', () => {
