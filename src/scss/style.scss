@@ -1774,7 +1774,7 @@ body {
 /* MEDICAL-STEPS */
 
 /* PLASTIC-SURGERY */
-.plastic-surgery {
+.tab-section {
 	&__background {
 	}
 	&__tabs {
@@ -1804,7 +1804,7 @@ body {
 			}
 
 			&:hover {
-				.plastic-surgery-tabs-btn__text {
+				.tab-section-tabs-btn__text {
 					color: #484848;
 				}
 			}
@@ -1881,7 +1881,7 @@ body {
 			max-width: 741px;
 		}
 		&__wrapper-tabs-navigation + &__tabs-content {
-			.plastic-surgery-children-tab__info {
+			.tab-section-children-tab__info {
 				margin-right: 20px;
 			}
 		}
