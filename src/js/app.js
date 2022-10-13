@@ -242,6 +242,26 @@ accordeonBtns.forEach(accordeonBtn => {
 });
 /* ACCORDIONS-BTNS */
 
+/* SERVICES-ACCORDEON */
+const accordeonServicesBtns = document.querySelectorAll('.services-prices-item__btn');
+const accordeonServicesContents = document.querySelectorAll('.services-prices-item__elems');
+
+accordeonServicesBtns.forEach((accordeonServicesBtn, index) => {
+    accordeonServicesBtn.addEventListener('click', () => {
+        if(accordeonServicesBtn.classList.contains('active')) {
+            accordeonServicesBtn.classList.remove('active');
+            accordeonServicesContents[index].classList.remove('active');
+            accordeonServicesContents[index].style.maxHeight = 0;
+        } else {
+            accordeonServicesBtn.classList.add('active');
+            accordeonServicesContents[index].classList.add('active');
+            accordeonServicesContents[index].style.maxHeight = accordeonServicesContents[index].scrollHeight + 'px';
+        }
+    });
+})
+
+/* SERVICES-ACCORDEON */
+
 /* TABS */
 const returnRootTabs = (tabs, index, sectionClass) => {
     const childrenTabsBtns = Array.from(tabs[index].lastElementChild.firstElementChild.firstElementChild.children);
@@ -303,23 +323,3 @@ tabsFunc('laser-vision-correction', 'laser-vision-correction-tabs__btn', 'laser-
 
 // tabsFunc('plastic-surgery-children-tabs__btn', 'plastic-surgery-children__tab');
 /* TABS */
-
-/* SERVICES-ACCORDEON */
-const accordeonServicesBtns = document.querySelectorAll('.services-prices-item__btn');
-const accordeonServicesContents = document.querySelectorAll('.services-prices-item__elems');
-
-accordeonServicesBtns.forEach((accordeonServicesBtn, index) => {
-    accordeonServicesBtn.addEventListener('click', () => {
-        if(accordeonServicesBtn.classList.contains('active')) {
-            accordeonServicesBtn.classList.remove('active');
-            accordeonServicesContents[index].classList.remove('active');
-            accordeonServicesContents[index].style.maxHeight = 0;
-        } else {
-            accordeonServicesBtn.classList.add('active');
-            accordeonServicesContents[index].classList.add('active');
-            accordeonServicesContents[index].style.maxHeight = accordeonServicesContents[index].scrollHeight + 'px';
-        }
-    });
-})
-
-/* SERVICES-ACCORDEON */

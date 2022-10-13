@@ -1581,7 +1581,9 @@ body {
 .breadcrumbs {
 	&__inner {
 		display: flex;
+		flex-wrap: wrap;
 		padding: 40px 0 60px;
+		color: #B6B6B6;
 	}
 
 	&__link, &__delimiter, &__current {
