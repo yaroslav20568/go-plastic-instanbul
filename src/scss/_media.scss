@@ -1,5 +1,5 @@
 @media(min-width: 1920px) {
-	.medical-info {
+	.medical-info-haracteristics {
 		&__background {
 			width: 79.5%;
 		}
@@ -65,7 +65,7 @@
 		}
 	}
 
-	.medical-info {
+	.medical-info-haracteristics {
 		&__background {
 			width: 100%;
 		}
@@ -232,7 +232,7 @@
 		}
 	}
 
-	.medical-info {
+	.medical-info-haracteristics {
 		&__texts {
 			margin-left: 20px;
 		}
@@ -276,24 +276,34 @@
 			grid-template-columns: 67.1% 26.9%;
 		}
 	}
-	
-	.hair-transplantation-item {
+
+	.medical-info {
 		&__inner {
 			align-items: center;
 		}
 
-		&__btns {
-			margin-top: 20px;
+		&__info {
+			margin-right: 40px;
+		}
+	}
+	
+	.medical-item {
+		&__inner {
+			align-items: center;
 		}
 
+		// &__btns {
+		// 	margin-top: 20px;
+		// }
+
 		&--content-left {
-			.hair-transplantation-item__info {
+			.medical-item__info {
 				margin-right: 40px;
 			}
 		}
 
 		&--content-right {
-			.hair-transplantation-item__img {
+			.medical-item__img {
 				margin-right: 40px;
 			}
 		}
@@ -418,7 +428,7 @@
 		}
 	}
 
-	.medical-info {
+	.medical-info-haracteristics {
 		&__inner {
 			display: block;
 		}
@@ -496,7 +506,7 @@
 		}
 	}
 
-	.hair-transplantation-item {
+	.medical-item {
 		&__btns {
 			flex-direction: column;
 			align-items: start;
@@ -730,13 +740,33 @@
 		}
 	}
 
-	.hair-transplantation-item {
+	.medical-info {
 		&__inner {
-			display: block;
+			// display: block;
+			flex-direction: column;
+    		align-items: start;
+		}
+
+		&__info {
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		&__img {
+			max-width: 100%;
+		}
+	}
+
+	.medical-item {
+		&__inner {
+			// display: block;
+			flex-direction: column;
+    		align-items: start;
 		}
 
 		&--content-left {
-			.hair-transplantation-item__info {
+			.medical-item__info {
 				max-width: none;
 				margin-right: 0;
 				margin-bottom: 30px;
@@ -744,13 +774,15 @@
 		}
 
 		&--content-right {
-			.hair-transplantation-item__info {
+			.medical-item__info {
 				max-width: none;
+				margin-bottom: 30px;
 			}
 
-			.hair-transplantation-item__img {
+			.medical-item__img {
+				order: 1;
 				margin-right: 0;
-				margin-bottom: 30px;
+				// margin-bottom: 30px;
 			}
 		}
 
@@ -913,13 +945,22 @@
 		}
 	}
 
-	.hair-transplantation-item {
-		&--dhi {
-			padding: 100px 0;
-		}
+	.medical-item {
+		// &--dhi {
+		// 	padding: 100px 0;
+		// }
 	
-		&--eyebrows-beards {
-			padding: 0 0 100px;
+		// &--eyebrows-beards {
+		// 	padding: 0 0 100px;
+		// }
+		padding: 100px 0;
+
+		&:first-child {
+			padding: 100px 0 0;	
+		}
+
+		&:last-child {
+			padding: 0 0 100px;	
 		}
 	}
 
@@ -1059,7 +1100,7 @@
 		}
 	}
 
-	.medical-info {
+	.medical-info-haracteristics {
 		&__imgs {
 			display: block;
 		}

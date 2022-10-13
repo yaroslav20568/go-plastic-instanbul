@@ -1596,23 +1596,20 @@ body {
 }
 /*	BREADCRUMBS */
 
-/* HAIR-TRANSPLANTATION-ITEM */
-.hair-transplantation-item {
-	&--fue {
-		padding: 0 0 50px 0;
-	}
+.medical-info {
+	// &--fue {
+	// 	padding: 0 0 50px 0;
+	// }
 
-	&--dhi {
-		padding: 120px 0;
-	}
+	// &--dhi {
+	// 	padding: 120px 0;
+	// }
 
-	&--eyebrows-beards {
-		padding: 0 0 120px;
-	}
+	// &--eyebrows-beards {
+	// 	padding: 0 0 120px;
+	// }
 
-	&--eyebrows-beards {
-
-	}
+	padding: 0 0 50px 0;
 
 	&--content-right {
 
@@ -1622,6 +1619,7 @@ body {
 		display: flex;
 		// align-items: center;
 		justify-content: space-between;
+		align-items: start;
 	}
 
 	&__info {
@@ -1652,10 +1650,78 @@ body {
 		border-radius: 10px;
 	}
 }
+
+/* HAIR-TRANSPLANTATION-ITEM */
+.medical-item {
+	// &--fue {
+	// 	padding: 0 0 50px 0;
+	// }
+
+	// &--dhi {
+	// 	padding: 120px 0;
+	// }
+
+	// &--eyebrows-beards {
+	// 	padding: 0 0 120px;
+	// }
+
+	padding: 120px 0;
+
+	&:first-child {
+		padding: 120px 0 0;	
+	}
+
+	&:last-child {
+		padding: 0 0 120px;	
+	}
+
+	&--content-right {
+
+	}
+
+	&__inner {
+		display: flex;
+		// align-items: center;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	&__info {
+		max-width: 645px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		margin-bottom: 35px;
+	}
+
+	&__text {
+		p {
+			font-size: 18px;
+			line-height: 120%;
+			color: $grey;
+			margin-bottom: 19px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__img {
+		border-radius: 10px;
+	}
+
+	&__btns {
+		margin-top: 20px;
+	}
+}
 /* HAIR-TRANSPLANTATION-ITEM */
 
 /* HAIR-TRANSPLANTATION-INFO */
-.medical-info {
+.medical-info-haracteristics {
 	padding: 50px 0;
 	position: relative;
 
