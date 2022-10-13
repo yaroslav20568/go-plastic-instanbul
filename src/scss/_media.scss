@@ -945,6 +945,10 @@
 		}
 	}
 
+	.medical-items {
+		padding: 100px 0;
+	}
+
 	.medical-item {
 		// &--dhi {
 		// 	padding: 100px 0;
@@ -953,15 +957,18 @@
 		// &--eyebrows-beards {
 		// 	padding: 0 0 100px;
 		// }
-		padding: 100px 0;
 
-		&:first-child {
-			padding: 100px 0 0;	
-		}
+		// padding: 100px 0;
 
-		&:last-child {
-			padding: 0 0 100px;	
-		}
+		// &:first-child {
+		// 	padding: 100px 0 0;	
+		// }
+
+		// &:last-child {
+		// 	padding: 0 0 100px;	
+		// }
+
+		margin-bottom: 100px;
 	}
 
 	.medical-steps {

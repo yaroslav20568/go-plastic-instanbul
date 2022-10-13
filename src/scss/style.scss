@@ -1652,6 +1652,9 @@ body {
 }
 
 /* HAIR-TRANSPLANTATION-ITEM */
+.medical-items {
+	padding: 120px 0;
+}
 .medical-item {
 	// &--fue {
 	// 	padding: 0 0 50px 0;
@@ -1665,14 +1668,20 @@ body {
 	// 	padding: 0 0 120px;
 	// }
 
-	padding: 120px 0;
+	// padding: 120px 0;
 
-	&:first-child {
-		padding: 120px 0 0;	
-	}
+	// &:first-child {
+	// 	padding: 120px 0 0;	
+	// }
+
+	// &:last-child {
+	// 	padding: 0 0 120px;	
+	// }
+
+	margin-bottom: 120px;
 
 	&:last-child {
-		padding: 0 0 120px;	
+		margin-bottom: 0;
 	}
 
 	&--content-right {
