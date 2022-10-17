@@ -320,6 +320,7 @@ tabsFunc('organ-trasplantation', 'organ-trasplantation-tabs__btn', 'organ-traspl
 tabsFunc('oncology', 'oncology-tabs__btn', 'oncology__tab');
 tabsFunc('orthopedics', 'orthopedics-tabs__btn', 'orthopedics__tab');
 tabsFunc('laser-vision-correction', 'laser-vision-correction-tabs__btn', 'laser-vision-correction__tab');
+// tabsFunc('neurology-and-neurosurgery', 'neurology-and-neurosurgery-tabs__btn', 'neurology-and-neurosurgery__tab');
 
 // tabsFunc('plastic-surgery-children-tabs__btn', 'plastic-surgery-children__tab');
 /* TABS */

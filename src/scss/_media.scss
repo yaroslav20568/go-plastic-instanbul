@@ -469,9 +469,9 @@
 			// 	}
 			// }
 
-			&__tabs-navigation {
-				margin-bottom: 20px;
-			}
+			// &__tabs-navigation {
+			// 	margin-bottom: 20px;
+			// }
 
 			&__tabs-content {
 				max-width: none !important;
@@ -1038,6 +1038,10 @@
 		&__item {
 			width: 50%;
 		}
+	}
+
+	.directions-item {
+		padding-top: 100px;
 	}
 }
 

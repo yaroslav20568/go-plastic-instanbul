@@ -1994,6 +1994,9 @@ body {
 				margin-right: 20px;
 			}
 		}
+		&__tabs-navigation {
+			margin-bottom: 20px;
+		}
 		&__tabs-content {
 			// max-width: 741px;
 		}
@@ -2021,6 +2024,7 @@ body {
 			&__img {
 				border-radius: 10px;
 				object-fit: cover;
+				height: 100%;
 			}
 		}
 		&__text {
@@ -2063,6 +2067,18 @@ body {
 	}
 }
 /* TAB-SECTION */
+
+.directions-item {
+	padding-top: 120px;
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:last-child {
+		padding-bottom: 120px;
+	}
+}
 
 /* PLASTIC-SURGERY */
 .plastic-surgery {
