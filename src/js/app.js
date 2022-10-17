@@ -315,12 +315,8 @@ tabsFunc('hair-transplantation', 'hair-transplantation-tabs__btn', 'hair-transpl
 tabsFunc('bariatrics', 'bariatrics-tabs__btn', 'bariatrics__tab');
 tabsFunc('dentistry', 'dentistry-tabs__btn', 'dentistry__tab');
 tabsFunc('reproductive-medicine', 'reproductive-medicine-tabs__btn', 'reproductive-medicine__tab');
-tabsFunc('dentistry', 'dentistry-tabs__btn', 'dentistry__tab');
 tabsFunc('organ-trasplantation', 'organ-trasplantation-tabs__btn', 'organ-trasplantation__tab');
 tabsFunc('oncology', 'oncology-tabs__btn', 'oncology__tab');
 tabsFunc('orthopedics', 'orthopedics-tabs__btn', 'orthopedics__tab');
 tabsFunc('laser-vision-correction', 'laser-vision-correction-tabs__btn', 'laser-vision-correction__tab');
-// tabsFunc('neurology-and-neurosurgery', 'neurology-and-neurosurgery-tabs__btn', 'neurology-and-neurosurgery__tab');
-
-// tabsFunc('plastic-surgery-children-tabs__btn', 'plastic-surgery-children__tab');
 /* TABS */

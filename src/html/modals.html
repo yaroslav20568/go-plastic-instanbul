@@ -1,0 +1,26 @@
+<div class="reproductive-medicine tab-section directions-item">
+    <div class="reproductive-medicine__background tab-section__background"></div>
+    <div class="container">
+        <h2 class="reproductive-medicine__title section__title">[[pdoField? &id=`14` &field=`pagetitle`]]</h2>
+        <div class="reproductive-medicine__tabs tab-section__tabs">
+            <div class="reproductive-medicine__tabs-navigation tab-section__tabs-navigation-green">
+                [[pdoResources?
+                    &parents=`14`
+                    &depth=`0`
+                    &sortby=`{ "createdon":"ASC" }`
+                    &tpl=`directions-item-tabs__btn`
+                ]]
+            </div>
+
+            <div class="reproductive-medicine__tabs-content tab-section__tabs-content">
+                [[pdoResources?
+                    &parents=`14`
+                    &depth=`0`
+                    &sortby=`{ "createdon":"ASC" }`
+                    &tpl=`directions-item-tabs_tab`
+                    &includeTVs=`direction-easy_text, direction-easy_img`
+                ]]
+            </div>
+        </div>
+    </div>
+</div>
