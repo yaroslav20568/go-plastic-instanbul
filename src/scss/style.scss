@@ -1882,6 +1882,12 @@ body {
 		&-content {
 		}
 	}
+	&__tabs-navigation + .tab-section__tabs-content .tab-section__children-tabs {
+		padding-top: 35px !important;
+	}
+	&__tabs-navigation-green + .tab-section__tabs-content .tab-section__children-tabs {
+		padding-top: 55px !important;
+	}
 	&__tab {
 	}
 	&-tabs {
@@ -1979,7 +1985,7 @@ body {
 	&__children-tabs {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 35px;
+		// padding-top: 35px;
 	}
 
 	&-children {
