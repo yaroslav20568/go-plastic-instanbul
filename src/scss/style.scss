@@ -569,6 +569,11 @@ body {
 		// 	z-index: -1;
 		// 	height: 100%;
 		// }
+
+		&__bottom-content {
+			display: none;
+			margin-top: 34px;
+		}
 	}
 }
 /* INTRO */
@@ -1713,6 +1718,8 @@ body {
 	}
 
 	&__text {
+		color: #888;
+
 		p {
 			font-size: 18px;
 			line-height: 120%;
@@ -2783,7 +2790,7 @@ body {
 
 /* ABOUT-US-FEEDBACK */
 .about-us-feedback {
-	background-image: url('@img/about-us-feedback/background.jpg');
+	// background-image: url('@img/about-us-feedback/background.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -2849,6 +2856,7 @@ body {
 		}
 		&__textarea {
 			height: 120px;
+			resize: none;
 		}
 		&__wrapper-btn {
 			margin-top: 40px;
