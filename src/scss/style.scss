@@ -65,11 +65,17 @@ body {
 			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
+			transition: .3s linear transform;
 		}
 
 		&.active {
 			&:after {
 				transform: translateY(-50%) rotate(180deg);
+			}
+
+			.header-widget__language-list {
+				opacity: 1;
+				z-index: 1;
 			}
 		}
 	}
@@ -79,6 +85,36 @@ body {
 		font-size: 18px;
 		line-height: 1.166;
 		color: $green;
+		text-transform: uppercase;
+	}
+
+	&-widget__language-list {
+		opacity: 0;
+		z-index: -100;
+		transition: 0.3s linear opacity;
+		position: absolute;
+		z-index: 10;
+		left: 0;
+		top: 200%;
+		width: 100%;
+		background-color: #F2F8FE;
+		border-radius: 10px;
+		padding: 10px;
+		cursor: auto;
+	}
+
+	&-widget__language-item {
+		cursor: pointer;
+		text-transform: uppercase;
+		margin-bottom: 6px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.active {
+			text-decoration: underline;
+		}
 	}
 
 	&__nav {

@@ -215,6 +215,31 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
     /* ACCORDIONS */
+
+    /* WIDGET-LANGUAGE */
+    const widgetLanguageBtn = document.querySelector('.header__widget-language');
+    const widgetlanguageText = document.querySelector('.header-widget__language-text');
+    const btnLanguageItems = document.querySelectorAll('.header-widget__language-item');
+    
+    widgetLanguageBtn.addEventListener('click', (e) => {
+        if(e.target.classList[0] === 'header-widget__language-list') {
+            widgetLanguageBtn.classList.remove('active');
+        }
+        if(widgetLanguageBtn.classList.contains('active')) {
+            widgetLanguageBtn.classList.remove('active');
+        } else {
+            widgetLanguageBtn.classList.add('active');
+        }
+    });
+    
+    btnLanguageItems.forEach(btnLanguageItem => {
+        btnLanguageItem.addEventListener('click', () => {
+            btnLanguageItems.forEach(btnLanguageItem => btnLanguageItem.classList.remove('active'));
+            btnLanguageItem.classList.add('active');
+            widgetlanguageText.textContent = btnLanguageItem.textContent;
+        });
+    })
+    /* WIDGET-LANGUAGE */
 });
 
 /* ACCORDIONS-BTNS */
