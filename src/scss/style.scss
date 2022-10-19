@@ -302,11 +302,13 @@ body {
 	}
 
 	&__top {
-		margin-bottom: 40px;
+		margin-bottom: 30px;
 		display: flex;
 		align-items: center;
 
 		&.active {
+			margin-bottom: 40px;
+			
 			.burger-menu__link {
 				margin-left: 15px;
 				order: 1;
