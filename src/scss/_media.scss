@@ -63,6 +63,12 @@
 		&__left {
 			max-width: none;
 		}
+
+		&__slide {
+			&-navigation {
+				justify-content: center;
+			}
+		}
 	}
 
 	.medical-info-haracteristics {
@@ -190,6 +196,21 @@
 }
 
 @media(max-width: 1200px) {
+	.header {
+		&__nav {
+			display: none;
+		}
+
+		&__wrapper-btn {
+			display: block;
+		}
+
+		&__burger {
+			display: block;
+			order: 1;
+		}
+	}
+
    .about-company {
 		&__left {
 			padding: 0;
@@ -248,11 +269,11 @@
 }
 
 @media(max-width: 1150px) {
-	.header {
-		&__wrapper-btn {
-			display: none;
-		}
-	}
+	// .header {
+	// 	&__wrapper-btn {
+	// 		display: none;
+	// 	}
+	// }
 
 	.medical-info-haracteristics {
 		&__texts {
@@ -262,11 +283,11 @@
 }
 
 @media(max-width: 1100px) {
-	.header {
-		&__wrapper-btn {
-			display: none;
-		}
-	}
+	// .header {
+	// 	&__wrapper-btn {
+	// 		display: none;
+	// 	}
+	// }
 
 	.stages-work {
 		&__tab {
@@ -525,21 +546,6 @@
 }
 
 @media(max-width: 900px) {
-	.header {
-		&__nav {
-			display: none;
-		}
-
-		&__wrapper-btn {
-			display: block;
-		}
-
-		&__burger {
-			display: block;
-			order: 1;
-		}
-	}
-
 	.medical-item {
 		&__btns {
 			flex-direction: column;
@@ -712,12 +718,6 @@
 }
 
 @media(max-width: 768px) {
-	.header {
-		&__wrapper-btn {
-			display: none;
-		}
-	}
-
 	.intro {
 		&-slide {
 			&__title {
@@ -875,6 +875,12 @@
 }
 
 @media(max-width: 650px) {
+	.header {
+		&__wrapper-btn {
+			display: none;
+		}
+	}
+
 	.intro {
 		margin-top: 127px;
 		overflow-x: clip;

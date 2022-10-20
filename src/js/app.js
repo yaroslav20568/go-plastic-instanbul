@@ -215,6 +215,69 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
     /* ACCORDIONS */
+
+    /* FORMS */
+    const validateInputs = (inputs) => {
+        let k = 0;
+
+        inputs.forEach(input => {
+            if(!input.value) {
+                input.style.border = '1px solid red';
+            } else {
+                k++;
+                input.style.border = '1px solid #000';
+            }
+        });
+
+        return k;
+    };
+
+    const resetInputs = (inputs) => {
+        inputs.forEach(input => {
+            input.value = '';
+        });
+    };
+
+    const sendData = (k, inputs, formClass) => {
+        if(inputs.length === k ) {
+            const form = document.querySelector(`.${formClass}`);
+            let formData = new FormData(form); 
+            console.log(form);
+
+            fetch('assets/sendMail.php', {
+                method: 'POST',
+                body: formData
+              }).then(resp => {
+                resetInputs(inputs);
+              })
+        }
+    }
+
+    const formFunction = (formClass, btnClass) => {
+        const inputs = document.querySelectorAll(`.${formClass} input[type="text"],  textarea`);
+        const btn = document.querySelector(`.${btnClass}`);
+        
+        if(btn) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+    
+                const k = validateInputs(inputs);
+    
+                sendData(k, inputs, formClass);
+            });
+    
+            inputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    validateInputs(inputs);
+                });
+            });
+        }
+    };
+
+    formFunction('write-us__form', 'write-us__form-btn');
+    formFunction('about-us-feedback__form', 'about-us-feedback-form__btn');
+    formFunction('contacts-feedback__form', 'contacts-feedback-form__btn');
+    /* FORMS */
 });
 
 /* ACCORDIONS-BTNS */
