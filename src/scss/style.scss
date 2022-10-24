@@ -3011,6 +3011,7 @@ body {
     // visibility: hidden;
     // opacity: 0;
     // transition: .3s linear;
+	display: none;
 
 	&--active {
 		visibility: visible;
@@ -3037,12 +3038,17 @@ body {
 	}
 
 	&__content {
-		width: 480px;
-		background-color: #fff;
-		color: $black;
-		padding: 32px;
-		border-radius: 16px 0 16px 16px;
+		// width: 480px;
+		// background-color: #fff;
+		// color: $black;
+		// padding: 32px;
+		// border-radius: 16px 0 16px 16px;
 		position: relative;
+
+		max-width: 455px;
+		background-color: #0061AD;
+		padding: 50px 50px 50px 45px;
+		border-radius: 10px;
 
 		// transform: perspective(600px) translateY(-120%) rotateX(45deg);
 		// transition: .5s linear;
@@ -3170,6 +3176,47 @@ body {
 	}
 }
 /* MODAL */
+
+
+/* CLINICS */
+.clinics {
+	padding-bottom: 120px;
+
+	&__title {
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		margin-bottom: -40px;
+	}
+
+	&__item {
+		width: 50%;
+		padding: 0 10px;
+		margin-bottom: 40px;
+	}
+
+	&-item {
+		&__img {
+			max-width: 100%;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		&__title {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+
+		&__text {
+			font-size: 20px;
+			color: $grey;
+		}
+	}
+}
+/* CLINICS */
 
 
 @import "media.scss";
