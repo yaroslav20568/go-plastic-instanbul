@@ -292,6 +292,19 @@ document.addEventListener('DOMContentLoaded', () => {
     formFunction('about-us-feedback__form', 'about-us-feedback-form__btn');
     formFunction('contacts-feedback__form', 'contacts-feedback-form__btn');
     /* FORMS */
+
+    /* SCROLL-TO */
+    const aboutBtnScroll = document.querySelector('.about-us-company__link');
+
+    aboutBtnScroll.addEventListener('click', () => {
+        const scrollToNumber = document.querySelector('.about-us-connection').getBoundingClientRect().y + window.pageYOffset;
+
+        window.scrollTo({
+            top: scrollToNumber,
+            behavior: "smooth"
+        });
+    });
+    /* SCROLL-TO */
 });
 
 /* ACCORDIONS-BTNS */
