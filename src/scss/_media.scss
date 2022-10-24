@@ -873,7 +873,7 @@
 		}
 	}
 
-	.clinics {
+	.clinics, .useful-information {
 		&__items {
 			display: block;
 		}
@@ -1144,7 +1144,7 @@
 		padding-top: 100px;
 	}
 	
-	.clinics {
+	.clinics, .useful-information {
 		padding-bottom: 100px;
 	}
 }
@@ -1259,7 +1259,7 @@
 
 	}
 
-	.partner-clinics {
+	.partner-clinics, .useful-information {
 		&__item {
 			&-img {
 				margin-bottom: 20px;
@@ -1315,7 +1315,7 @@
 		}
 	}
 
-	.clinics {
+	.clinics, .useful-information {
 		&-item {
 			&__img {
 				margin-bottom: 20px;

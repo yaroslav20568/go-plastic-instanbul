@@ -3179,7 +3179,7 @@ body {
 
 
 /* CLINICS */
-.clinics {
+.clinics, .useful-information {
 	padding-bottom: 120px;
 
 	&__title {
@@ -3217,6 +3217,16 @@ body {
 	}
 }
 /* CLINICS */
+
+/* USEFUL-INFORMATION */
+.useful-information {
+	&-item {
+		&__title {
+			color: $black;
+		}
+	}
+}
+/* USEFUL-INFORMATION */
 
 
 @import "media.scss";
