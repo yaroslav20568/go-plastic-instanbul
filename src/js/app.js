@@ -224,8 +224,22 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!input.value) {
                 input.style.border = '1px solid red';
             } else {
-                k++;
-                input.style.border = '1px solid #000';
+                if(input.name === 'name' && /^[a-zA-Zа-яА-ЯёЁ ]+$/.test(input.value)) {
+                    k++;
+                    input.style.border = '1px solid #000';
+                } else if(input.name === 'phone' && /^[0-9]{7,7}$/.test(input.value)) {
+                    k++;
+                    input.style.border = '1px solid #000';
+                } else if(input.name === 'email' && /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i.test(input.value)) {
+                    k++;
+                    input.style.border = '1px solid #000';
+                } else if(input.name === 'message') {
+                    k++;
+                    input.style.border = '1px solid #000';
+                } else {
+                    k--;
+                    input.style.border = '1px solid red';
+                }
             }
         });
 
