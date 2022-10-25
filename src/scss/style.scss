@@ -1664,7 +1664,7 @@ body {
 		display: flex;
 		// align-items: center;
 		justify-content: space-between;
-		align-items: start;
+		// align-items: start;
 	}
 
 	&__info {
@@ -1697,6 +1697,7 @@ body {
 
 	&__img {
 		border-radius: 10px;
+		height: 100%;
 	}
 }
 
@@ -1741,7 +1742,7 @@ body {
 		display: flex;
 		// align-items: center;
 		justify-content: space-between;
-		align-items: start;
+		// align-items: start;
 	}
 
 	&__info {
@@ -1772,6 +1773,7 @@ body {
 
 	&__img {
 		border-radius: 10px;
+		height: 100%;
 	}
 
 	&__btns {
@@ -2074,6 +2076,10 @@ body {
 				flex-direction: column;
 				justify-content: space-between;
 				margin-right: 118px;
+			}
+
+			&__text + &__wrapper-link {
+				margin-bottom: 13px;
 			}
 
 			&__img {
