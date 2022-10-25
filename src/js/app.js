@@ -352,8 +352,37 @@ accordeonServicesBtns.forEach((accordeonServicesBtn, index) => {
 
 /* SERVICES-ACCORDEON */
 
+const plasticSurgeryTabs = (sectionClass, btnsClass, tabsClass) => {
+    const tabsBtns = document.querySelectorAll(`.${sectionClass} .${btnsClass}`);
+    const tabs = document.querySelectorAll(`.${sectionClass} .${tabsClass}`);
+    console.log(sectionClass);
+    
+    // console.log(tabsBtns);
+    console.log(tabs);
+    
+    if(tabsBtns.length && tabsBtns.length !== 1) {
+        tabsBtns.forEach(tabsBtn => tabsBtn.classList.remove('active'));
+        tabs.forEach(tab => tab.style.display = 'none');
+
+        tabsBtns[0].classList.add('active');
+        tabs[0].style.display = 'flex';
+
+        tabsBtns.forEach((tabsBtn, index) => {
+            tabsBtn.addEventListener('click', () => {
+                tabsBtns.forEach(tabsBtn => tabsBtn.classList.remove('active'));
+                    tabs.forEach(tab => tab.style.display = 'none');
+                    
+                    tabsBtns[index].classList.add('active');
+                    tabs[index].style.display = 'flex';
+            });
+        });
+    }
+};
+const sectionItems = document.querySelectorAll('.plastic-surgery-dir__tab');
+sectionItems.forEach(sectionItem => plasticSurgeryTabs(sectionItem.classList[2], 'plastic-surgery-dir-children-tabs__btn', 'plastic-surgery-dir-children__tab'));
+
 /* TABS */
-const returnRootTabs = (tabs, index, sectionClass) => {
+function returnRootTabs(tabs, index, sectionClass) {
     const childrenTabsBtns = Array.from(tabs[index].lastElementChild.firstElementChild.firstElementChild.children);
     const childrenTabs = Array.from(tabs[index].lastElementChild.lastElementChild.children);
     // console.log(childrenTabsBtns);
@@ -370,12 +399,12 @@ const returnRootTabs = (tabs, index, sectionClass) => {
     });
 };
 
-const hideTabs = (tabs, tabsBtns) => {
+function hideTabs(tabs, tabsBtns) {
     tabsBtns.forEach(tabsBtn => tabsBtn.classList.remove('active'));
     tabs.forEach(tab => tab.style.display = 'none');
 }
 
-const showTab = (tabs, tabsBtns, i, displayValue) => {
+function showTab(tabs, tabsBtns, i, displayValue) {
     hideTabs(tabs, tabsBtns);
     tabsBtns[i].classList.add('active');
     tabs[i].style.display = displayValue;

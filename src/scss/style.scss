@@ -2150,6 +2150,17 @@ body {
 	&__title {
 		margin-bottom: 35px;
 	}
+
+}
+
+.plastic-surgery-dir {
+	&__item {
+		padding-bottom: 120px;
+		
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
 }
 /* PLASTIC-SURGERY */
 
