@@ -307,6 +307,44 @@ document.addEventListener('DOMContentLoaded', () => {
     /* SCROLL-TO */
 });
 
+if(document.querySelector('.medical-info-single')) {
+    // const medicalInfoSingleTexts = document.querySelectorAll('.medical-info-single .medical-info__text p');
+    // console.log(medicalInfoSingleTexts.length);
+    
+    // medicalInfoSingleTexts.forEach((medicalInfoSingleText, index) => {
+    //     if(index !== 0) {
+    //         medicalInfoSingleText.style.display = 'none';
+    //     }
+    // });
+
+    const readMoreText = document.querySelector('.read-more__text');
+    readMoreText.style.display = 'none';
+
+    const readMoreBtn = document.querySelector('.medical-info-single .btn--circle--green');
+    console.log(readMoreBtn);
+
+    readMoreBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!readMoreBtn.classList.contains('active')) {
+            readMoreBtn.classList.add('active');
+            readMoreText.style.display = 'block';
+            // medicalInfoSingleTexts.forEach((medicalInfoSingleText, index) => {
+            //     if(index > 0) {
+            //         medicalInfoSingleText.style.display = 'block';
+            //     }
+            // });
+        } else {
+            readMoreBtn.classList.remove('active');
+            readMoreText.style.display = 'none';
+            // medicalInfoSingleTexts.forEach((medicalInfoSingleText, index) => {
+            //     if(index !== 0) {
+            //         medicalInfoSingleText.style.display = 'none';
+            //     }
+            // });
+        }
+    });
+}
+
 /* ACCORDIONS-BTNS */
 // const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps__btn');
 const accordeonBtns = document.querySelectorAll('.medical-steps .btn--circle--green');
