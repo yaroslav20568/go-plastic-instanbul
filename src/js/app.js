@@ -307,16 +307,9 @@ document.addEventListener('DOMContentLoaded', () => {
     /* SCROLL-TO */
 });
 
-if(document.querySelector('.medical-info-single')) {
-    // const medicalInfoSingleTexts = document.querySelectorAll('.medical-info-single .medical-info__text p');
-    // console.log(medicalInfoSingleTexts.length);
-    
-    // medicalInfoSingleTexts.forEach((medicalInfoSingleText, index) => {
-    //     if(index !== 0) {
-    //         medicalInfoSingleText.style.display = 'none';
-    //     }
-    // });
 
+/* READ-MORE-BTN */
+if(document.querySelector('.medical-info-single')) {
     const readMoreText = document.querySelector('.read-more__text');
     readMoreText.style.display = 'none';
 
@@ -328,22 +321,38 @@ if(document.querySelector('.medical-info-single')) {
         if(!readMoreBtn.classList.contains('active')) {
             readMoreBtn.classList.add('active');
             readMoreText.style.display = 'block';
-            // medicalInfoSingleTexts.forEach((medicalInfoSingleText, index) => {
-            //     if(index > 0) {
-            //         medicalInfoSingleText.style.display = 'block';
-            //     }
-            // });
         } else {
             readMoreBtn.classList.remove('active');
             readMoreText.style.display = 'none';
-            // medicalInfoSingleTexts.forEach((medicalInfoSingleText, index) => {
-            //     if(index !== 0) {
-            //         medicalInfoSingleText.style.display = 'none';
-            //     }
-            // });
         }
     });
 }
+/* READ-MORE-BTN */
+
+/* MODAL */
+const modalBtns = document.querySelectorAll('.header__btn');
+const closebtn = document.querySelector('.modal__close');
+const modal = document.querySelector('.contact-modal');
+
+modalBtns.forEach(modalBtn => {
+    modalBtn.addEventListener('click', () => {
+        modal.classList.add('modal--active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+closebtn.addEventListener('click', () => {
+    modal.classList.remove('modal--active');
+    document.body.style.overflow = 'auto';
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target.parentElement === modal) {
+        modal.classList.remove('modal--active');
+        document.body.style.overflow = 'auto';
+    }
+});
+/* MODAL */
 
 /* ACCORDIONS-BTNS */
 // const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps__btn');

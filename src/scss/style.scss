@@ -3029,10 +3029,9 @@ body {
     z-index: 1000;
     overflow-y: auto;
     overflow-x: hidden;
-    // visibility: hidden;
-    // opacity: 0;
-    // transition: .3s linear;
-	display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s linear;
 
 	&--active {
 		visibility: visible;
@@ -3116,14 +3115,16 @@ body {
 	}
 
 	&__title {
-		font-size: 36px;
-		line-height: 1;
-		margin-bottom: 16px;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 1.166;
+		color: $white;
+		margin-bottom: 15px;
 	}
 
-	&__subtitle {
-		font-size: 14px;
-		line-height: 1.357;
+	&__text {
+		color: $light;
+    	margin-bottom: 30px;
 	}
 
 	&__error-message, &__recaptcha-error {
@@ -3155,45 +3156,34 @@ body {
 }
 
 .form {
-	&__input {
+	&__input, &__textarea, &__submit {
+		display: block;
+	}
+	&__input, &__textarea {
 		width: 100%;
-		padding: 16px 0;
-		border-bottom: 1px solid $black;
-		margin-top: 26px;
-		font-size: 14px;
-		line-height: 19px;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&::placeholder {
-			color: $black;
-		}
-	}
-	
-	&__wrapper-btn {
-		text-align: center;
-		margin-top: 16px;
-	}
-
-	&__btn {
-		color: #3903AA;
-		padding: 16px 36px;
-		border: 2px solid #3903AA;
-		border-radius: 28px;
-		background: none;
-		cursor: pointer;
-		font-weight: 700;
+		background-color: $white;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		padding: 13px 20px;
 		font-size: 16px;
 		line-height: 1.187;
 
-		transition: .3s linear color, .3s linear background-color;
-
-		&:hover {
-			background-color: #3903AA;
-			color: #fff;
+		&::placeholder {
+			color: $grey;
 		}
+	}
+	&__input {
+		height: 47px;
+	}
+	&__textarea {
+		height: 120px;
+	}
+	&__wrapper-btn {
+		margin-top: 40px;
+	}
+	&__btn {
+		padding: 17px 47px;
+		cursor: pointer;
 	}
 }
 /* MODAL */
