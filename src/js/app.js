@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* READ-MORE-BTN */
-if(document.querySelector('.medical-info-single')) {
+if(document.querySelector('.medical-info-single') && document.querySelector('.read-more__text')) {
     const readMoreText = document.querySelector('.read-more__text');
     readMoreText.style.display = 'none';
 
@@ -335,7 +335,7 @@ if(document.querySelector('.medical-info-single')) {
 /* READ-MORE-BTN */
 
 /* MODAL */
-const modalBtns = document.querySelectorAll('.header__btn');
+const modalBtns = document.querySelectorAll('.consult-btn');
 const closebtn = document.querySelector('.modal__close');
 const modal = document.querySelector('.contacts-modal');
 
