@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const sendData = (k, inputs, formClass) => {
-        if(inputs.length === k ) {
+        if(inputs.length === k) {
             const form = document.querySelector(`.${formClass}`);
             let formData = new FormData(form); 
             console.log(form);
@@ -261,14 +261,18 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch('assets/sendMail.php', {
                 method: 'POST',
                 body: formData
-              }).then(resp => {
+            }).then(resp => {
                 resetInputs(inputs);
-              })
+
+                if(formClass === 'contacts-modal__form') {
+                    document.querySelector('.contacts-modal').classList.remove('modal--active');
+                }
+            })
         }
     }
 
     const formFunction = (formClass, btnClass) => {
-        const inputs = document.querySelectorAll(`.${formClass} input[type="text"],  textarea`);
+        const inputs = document.querySelectorAll(`.${formClass} input[type="text"], .${formClass} textarea`);
         const btn = document.querySelector(`.${btnClass}`);
         
         if(btn) {
@@ -291,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formFunction('write-us__form', 'write-us__form-btn');
     formFunction('about-us-feedback__form', 'about-us-feedback-form__btn');
     formFunction('contacts-feedback__form', 'contacts-feedback-form__btn');
+    formFunction('contacts-modal__form', 'contacts-modal-form__btn');
     /* FORMS */
 
     /* SCROLL-TO */
@@ -332,7 +337,7 @@ if(document.querySelector('.medical-info-single')) {
 /* MODAL */
 const modalBtns = document.querySelectorAll('.header__btn');
 const closebtn = document.querySelector('.modal__close');
-const modal = document.querySelector('.contact-modal');
+const modal = document.querySelector('.contacts-modal');
 
 modalBtns.forEach(modalBtn => {
     modalBtn.addEventListener('click', () => {
