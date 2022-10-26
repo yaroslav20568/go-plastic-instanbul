@@ -857,14 +857,27 @@ body {
 			position: relative;
 		}
 
+		@keyframes animation-name {   
+			0% {     
+				background-color: rgba(121, 183, 58, 0.2);
+			}   
+			50% {     
+				background-color: rgba(121, 183, 58, 0.4);
+			} 
+			100% {
+				background-color: rgba(121, 183, 58, 0.2);	
+			}
+		  }
+
 		&__count {
 			width: 98px;
 			height: 98px;
-			background-color: $green;
+			// background-color: $green;
 			background-color: rgba(121, 183, 58, 0.4);
 			border-radius: 100%;
 			position: absolute;
 			left: 0;
+			animation: animation-name 2s ease infinite;
 
 			&:before {
 				content: "";
