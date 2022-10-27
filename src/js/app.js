@@ -258,14 +258,23 @@ document.addEventListener('DOMContentLoaded', () => {
             let formData = new FormData(form); 
             console.log(form);
 
+            const formAlert = document.querySelector('.form-alert');
+            const alertCloseBtn = document.querySelector('.form-alert__close');
+
+            alertCloseBtn.addEventListener('click', () => {
+                formAlert.classList.remove('active');
+            });
+
             fetch('assets/sendMail.php', {
                 method: 'POST',
                 body: formData
             }).then(resp => {
                 resetInputs(inputs);
+                formAlert.classList.add('active');
 
                 if(formClass === 'contacts-modal__form') {
                     document.querySelector('.contacts-modal').classList.remove('modal--active');
+                    document.body.style.overflow = 'auto';
                 }
             })
         }

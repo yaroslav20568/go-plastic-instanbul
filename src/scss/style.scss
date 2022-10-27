@@ -3252,5 +3252,66 @@ body {
 }
 /* USEFUL-INFORMATION */
 
+/* FORM-ALERT */
+.form-alert {
+	background-color: pink;
+	position: fixed;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	padding: 20px 0;
+	top: 0;
+	transform: translateY(-101%);
+	opacity: 0;
+	transition: .3s linear opacity, .3s linear transform;
+
+	&.active {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__text {
+		margin-right: 15px;
+	}
+
+	&__close {
+		width: 15px;
+		height: 15px;
+		position: relative;
+		cursor: pointer;
+		transition: .3s linear transform;
+
+		&:hover {
+			transform: scale(1.3);
+		}
+
+		&:before, &:after {
+			content: "";
+			display: block;
+			width: 15px;
+			height: 2px;
+			position: absolute;
+			background-color: $black;
+		}
+
+		&:before {
+			top: 6px;
+			transform: rotate(45deg)
+		}
+
+		&:after {
+			top: 6px;
+			transform: rotate(-45deg)
+		}
+	}
+}
+/* FORM-ALERT */
+
 
 @import "media.scss";
