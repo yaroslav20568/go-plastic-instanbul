@@ -154,12 +154,14 @@ body {
 					right: 0;
 					top: 50%;
 					transform: translateY(-50%);
-					transition: .3s linear background-image;
+					transition: .3s linear background-image, .3s linear transform;
 				}
 
 				&:hover {
 					&:before {
 						background-image: url('@img/nav-green-arrow.svg');
+						transform: rotate(180deg);
+						top: 45%;
 					}
 				}
 			}
@@ -286,7 +288,7 @@ body {
 	// }
 }
 .burger-menu {
-	display: none;
+	// display: none;
 	height: 100%;
 	position: fixed;
 	top: 0;
@@ -296,6 +298,12 @@ body {
 	z-index: 1000;
 	padding: 0 25px;
 	overflow: auto;
+	transform: translateX(-100%);
+	transition: .4s linear transform;
+
+	&.active {
+		transform: translateX(0%);
+	}
 
 	&__list {
 		padding: 80px 0;

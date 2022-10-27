@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerBtn.addEventListener('click', () => {
         if(burgerBtn.classList.contains('active')) {
             burgerBtn.classList.remove('active');
-            burgerMenu.style.display = 'none';
+            // burgerMenu.style.display = 'none';
+            burgerMenu.classList.remove('active');
             document.body.style.overflow = 'auto';
         } else {
             burgerBtn.classList.add('active');
-            burgerMenu.style.display = 'block';
+            // burgerMenu.style.display = 'block';
+            burgerMenu.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
     });
@@ -22,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         if(document.body.clientWidth > 900) {
             burgerBtn.classList.remove('active');
-            burgerMenu.style.display = 'none';
+            // burgerMenu.style.display = 'none';
+            burgerMenu.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
     });
