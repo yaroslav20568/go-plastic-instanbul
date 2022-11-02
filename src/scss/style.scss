@@ -95,11 +95,12 @@ body {
 		position: absolute;
 		left: 0;
 		top: 200%;
-		width: 100%;
+		// width: 100%;
 		background-color: #F2F8FE;
 		border-radius: 10px;
 		padding: 10px;
 		cursor: auto;
+		margin-left: -10px;
 	}
 
 	&-widget__language-item {
@@ -107,6 +108,7 @@ body {
 		cursor: pointer;
 		text-transform: uppercase;
 		margin-bottom: 6px;
+		color: $black;
 
 		&:last-child {
 			margin-bottom: 0;
