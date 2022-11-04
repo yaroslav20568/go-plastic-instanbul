@@ -82,7 +82,7 @@ body {
 
 	&-widget__language-text {
 		font-weight: 500;
-		font-size: 18px;
+		// font-size: 18px;
 		line-height: 1.166;
 		color: $green;
 		text-transform: uppercase;
@@ -1647,6 +1647,7 @@ body {
 .breadcrumbs {
 	&__inner {
 		display: flex;
+		align-items: center;
 		flex-wrap: wrap;
 		padding: 40px 0 60px;
 		color: #B6B6B6;
@@ -1711,7 +1712,7 @@ body {
 		/* LISHN */
 
 		p {
-			font-size: 18px;
+			// font-size: 18px;
 			line-height: 120%;
 			color: $grey;
 			margin-bottom: 19px;
@@ -1787,7 +1788,7 @@ body {
 		color: #888;
 
 		p {
-			font-size: 18px;
+			// font-size: 18px;
 			line-height: 120%;
 			color: $grey;
 			margin-bottom: 19px;
@@ -2281,6 +2282,7 @@ body {
 			margin-bottom: 15px;
 		}
 		&-text {
+			font-size: 16px;
 			color: $grey;
 		}
 	}
@@ -3244,6 +3246,7 @@ body {
 		}
 
 		&__text {
+			font-size: 16px;
 			color: $grey;
 		}
 	}
