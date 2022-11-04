@@ -381,13 +381,13 @@ accordeonBtns.forEach(accordeonBtn => {
     accordeonBtn.addEventListener('click', () => {
         if(accordeonBtn.classList.contains('active')) {
             accordeonBtn.classList.remove('active');
-            accordeonBtn.previousElementSibling.textContent = 'Развернуть';
+            accordeonBtn.previousElementSibling.textContent = location.href.includes('/en/') ? 'unwrap': 'Развернуть';
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.classList.remove('show'));
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.style.maxHeight = 0);
             accordeonItemTops.forEach(accordeonItemTop => accordeonItemTop.style.marginBottom = 0);
         } else {
             accordeonBtn.classList.add('active');
-            accordeonBtn.previousElementSibling.textContent = 'Свернуть';
+            accordeonBtn.previousElementSibling.textContent = location.href.includes('/en/') ? 'wrap': 'Свернуть';
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.classList.add('show'));
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.style.maxHeight = accordeonItemText.scrollHeight + 'px');
             accordeonItemTops.forEach(accordeonItemTop => accordeonItemTop.style.marginBottom = '20px');
