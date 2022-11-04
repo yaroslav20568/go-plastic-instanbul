@@ -1408,6 +1408,29 @@
 }
 
 @media(max-width: 420px) {
+	.our-directions {
+		&__item {
+			&-info {
+				flex-direction: column;
+			}
+
+			&-left {
+				order: 1;
+			}
+
+			&-right {
+				flex-direction: row;
+				align-items: center;
+				margin-bottom: 23px;
+			}
+
+			&-title {
+				max-width: 170px;
+				margin-right: 10px;
+			}
+		}		
+	}
+
 	.blog {
 		&-slide {
 			&__link {
@@ -1459,28 +1482,28 @@
 		}
 	}
 
-	.our-directions {
-		&__item {
-			&-info {
-				flex-direction: column;
-			}
+	// .our-directions {
+	// 	&__item {
+	// 		&-info {
+	// 			flex-direction: column;
+	// 		}
 
-			&-left {
-				order: 1;
-			}
+	// 		&-left {
+	// 			order: 1;
+	// 		}
 
-			&-right {
-				flex-direction: row;
-				align-items: center;
-				margin-bottom: 23px;
-			}
+	// 		&-right {
+	// 			flex-direction: row;
+	// 			align-items: center;
+	// 			margin-bottom: 23px;
+	// 		}
 
-			&-title {
-				max-width: 170px;
-				margin-right: 10px;
-			}
-		}		
-	}
+	// 		&-title {
+	// 			max-width: 170px;
+	// 			margin-right: 10px;
+	// 		}
+	// 	}		
+	// }
 
 	.why-are-we {
 		&-item {

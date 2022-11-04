@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 grid: {
-                    rows: 1
+                    rows: 2
                 },
             },
             576: {
