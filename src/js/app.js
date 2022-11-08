@@ -310,6 +310,18 @@ document.addEventListener('DOMContentLoaded', () => {
     formFunction('contacts-modal__form', 'contacts-modal-form__btn');
     /* FORMS */
 
+    /* MORE-TEXT */
+    const reviewTextBtns = document.querySelectorAll('.reviews-slide__text a');
+    console.log(reviewTextBtns)
+    reviewTextBtns.forEach(reviewTextBtn => {
+        reviewTextBtn.addEventListener('click', () => {
+            reviewTextBtn.style.display = 'none';
+            reviewTextBtn.nextElementSibling.style.display = 'inline';
+            reviewTextBtn.previousElementSibling.textContent = reviewTextBtn.previousElementSibling.textContent.replace('...', '');
+        });
+    })
+    /* MORE-TEXT */
+
     /* SCROLL-TO */
     const aboutBtnScroll = document.querySelector('.about-us-company__link');
 
