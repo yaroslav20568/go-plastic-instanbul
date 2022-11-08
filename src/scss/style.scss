@@ -1378,6 +1378,8 @@ body {
 		}
 
 		&__title {
+			display: block;
+			color: #000;
 			font-size: 20px;
 			margin-bottom: 10px;
 		}
@@ -3329,6 +3331,19 @@ body {
 	}
 }
 /* FORM-ALERT */
+
+.blog-item {
+	padding-bottom: 120px;
+
+	&__img {
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		color:  #888;
+	}
+}
 
 
 @import "media.scss";
