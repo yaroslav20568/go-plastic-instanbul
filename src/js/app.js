@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* READ-MORE-BTN */
 if(document.querySelector('.medical-info-single') && document.querySelector('.read-more__text')) {
     const readMoreText = document.querySelector('.read-more__text');
-    readMoreText.style.display = 'none';
+    // readMoreText.style.display = 'none';
 
     const readMoreBtn = document.querySelector('.medical-info-single .btn--circle--green');
     console.log(readMoreBtn);
