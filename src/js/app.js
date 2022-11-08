@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(input.name === 'name' && /^[a-zA-Zа-яА-ЯёЁ ]+$/.test(input.value)) {
                     k++;
                     input.style.border = '1px solid #000';
-                } else if(input.name === 'phone' && /^[0-9]{7,7}$/.test(input.value)) {
+                } else if(input.name === 'phone' && /^[0-9]{9,13}$/.test(input.value)) {
                     k++;
                     input.style.border = '1px solid #000';
                 } else if(input.name === 'email' && /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i.test(input.value)) {
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* READ-MORE-BTN */
 if(document.querySelector('.medical-info-single') && document.querySelector('.read-more__text')) {
     const readMoreText = document.querySelector('.read-more__text');
-    readMoreText.style.display = 'none';
+    // readMoreText.style.display = 'none';
 
     const readMoreBtn = document.querySelector('.medical-info-single .btn--circle--green');
     console.log(readMoreBtn);

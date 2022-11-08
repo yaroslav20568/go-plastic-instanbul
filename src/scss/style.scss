@@ -1366,7 +1366,24 @@ body {
 
 	}
 
-	&-slide {
+	&-single {
+		padding-bottom: 120px;
+
+		&__items {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+			margin-bottom: -40px;
+		}
+
+		&__item {
+			width: 50%;
+			padding: 0 10px;
+			margin-bottom: 40px;
+		}
+	}
+
+	&-slide, &-single {
 		&__img {
 			position: relative;
 			margin-bottom: 44px;
@@ -1690,6 +1707,16 @@ body {
 
 	&-single {
 		padding-bottom: 120px;
+
+		.medical-info__text {
+			p {
+				display: none;
+
+				&:first-child {
+					display: block;
+				}
+			}
+		}
 	}
 
 	&--content-right {
