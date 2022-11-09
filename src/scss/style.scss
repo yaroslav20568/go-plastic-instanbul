@@ -2119,8 +2119,12 @@ body {
 			// max-width: 741px;
 		}
 		&__tab {
-			display: flex;
-			justify-content: space-between;
+			display: none;
+
+			&:first-child {
+				display: flex;
+				justify-content: space-between;
+			}
 		}
 		&-tab {
 			&__wrapper-btn {
@@ -2208,6 +2212,13 @@ body {
 		margin-bottom: 35px;
 	}
 
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
 }
 
 .plastic-surgery-dir {
@@ -2226,6 +2237,14 @@ body {
 	&__title {
 		margin-bottom: 35px;
 	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
 }
 /* HAIR-TRANSPLANTATION */
 
@@ -2233,6 +2252,14 @@ body {
 .bariatrics {
 	&__title {
 		margin-bottom: 35px;
+	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
 	}
 }
 /* BARIATRICS */
@@ -2242,6 +2269,14 @@ body {
 	&__title {
 		margin-bottom: 35px;
 	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
 }
 /* DENTISTRY */
 
@@ -2249,6 +2284,14 @@ body {
 .reproductive-medicine {
 	&__title {
 		margin-bottom: 35px;
+	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
 	}
 }
 /* REPRODUCTIVE-MEDICINE */
@@ -2258,6 +2301,14 @@ body {
 	&__title {
 		margin-bottom: 35px;
 	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
 }
 /* ORGAN-TRASPLANTATION */
 
@@ -2265,6 +2316,14 @@ body {
 .oncology {
 	&__title {
 		margin-bottom: 35px;
+	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
 	}
 }
 /* ONCOLOGY */
@@ -2274,6 +2333,14 @@ body {
 	&__title {
 		margin-bottom: 35px;
 	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
 }
 /* ORTHOPEDICS */
 
@@ -2281,6 +2348,14 @@ body {
 .laser-vision-correction {
 	&__title {
 		margin-bottom: 35px;
+	}
+
+	&__tab {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
 	}
 }
 /* LASER-VISION-CORRECTION */
