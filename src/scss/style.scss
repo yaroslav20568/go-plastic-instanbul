@@ -3373,10 +3373,10 @@ body {
 
 /* FORM-ALERT */
 .form-alert {
-	background-color: pink;
+	background-color: #0061C5;
 	position: fixed;
 	left: 0;
-	z-index: 1;
+	z-index: 100;
 	width: 100%;
 	padding: 20px 0;
 	top: 0;
@@ -3397,6 +3397,7 @@ body {
 
 	&__text {
 		margin-right: 15px;
+		color: #fff;
 	}
 
 	&__close {
@@ -3416,7 +3417,7 @@ body {
 			width: 15px;
 			height: 2px;
 			position: absolute;
-			background-color: $black;
+			background-color: #fff;
 		}
 
 		&:before {

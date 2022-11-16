@@ -279,6 +279,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.querySelector('.contacts-modal').classList.remove('modal--active');
                     document.body.style.overflow = 'auto';
                 }
+
+                setTimeout(() => {
+                    formAlert.classList.remove('active');
+                }, 5000);
             })
         }
     }
