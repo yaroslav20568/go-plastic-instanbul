@@ -94,8 +94,8 @@ body {
 		transition: 0.3s linear opacity;
 		position: absolute;
 		left: 0;
-		top: 200%;
-		// width: 100%;
+		top: 100%;
+		width: 130%;
 		background-color: #F2F8FE;
 		border-radius: 10px;
 		padding: 10px;
@@ -114,9 +114,9 @@ body {
 			margin-bottom: 0;
 		}
 
-		&.active {
-			text-decoration: underline;
-		}
+		// &.active {
+		// 	text-decoration: underline;
+		// }
 	}
 
 	&__nav {
@@ -512,6 +512,7 @@ body {
 
 	&__wrapper-btn {
 		margin-right: 40px;
+		cursor: pointer;
 
 		&:last-child {
 			margin-right: 0;
@@ -2134,6 +2135,10 @@ body {
 			&__text {
 				color: $grey;
 				margin-bottom: 20px;
+				p {
+					color: $grey;
+					margin-bottom: 20px;
+				}
 			}
 
 			&__info {

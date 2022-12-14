@@ -342,21 +342,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* READ-MORE-BTN */
-if(document.querySelector('.medical-info-single') && document.querySelector('.read-more__text')) {
-    const readMoreText = document.querySelector('.read-more__text');
-    readMoreText.style.display = 'none';
+if((document.querySelector('.medical-info-single') || document.querySelector('.medical-item')) && document.querySelector('.read-more__text')) {
+    const readMoreTexts = document.querySelectorAll('.read-more__text');
+    readMoreTexts.forEach((readMoreText) => {
+        readMoreText.style.display = 'none';
+    });
 
-    const readMoreBtn = document.querySelector('.medical-info-single .btn--circle--green');
+    const readMoreBtn = document.querySelector('.medical-info-single .btn--circle--green') || document.querySelector('.medical-item .btn--circle--green');
     console.log(readMoreBtn);
 
     readMoreBtn.addEventListener('click', (e) => {
         e.preventDefault();
         if(!readMoreBtn.classList.contains('active')) {
             readMoreBtn.classList.add('active');
-            readMoreText.style.display = 'block';
+            readMoreTexts.forEach((readMoreText) => {
+                readMoreText.style.display = 'block';
+            });
         } else {
             readMoreBtn.classList.remove('active');
-            readMoreText.style.display = 'none';
+            readMoreTexts.forEach((readMoreText) => {
+                readMoreText.style.display = 'none';
+            });
         }
     });
 }
@@ -389,21 +395,21 @@ modal.addEventListener('click', (e) => {
 
 /* ACCORDIONS-BTNS */
 // const accordeonBtns = document.querySelectorAll('.hair-transplantation-steps__btn');
-const accordeonBtns = document.querySelectorAll('.medical-steps .btn--circle--green');
+const accordeonBtns = document.querySelectorAll('.medical-steps__wrapper-btn');
 const accordeonItemTexts = document.querySelectorAll('.medical-steps__item-text');
 const accordeonItemTops = document.querySelectorAll('.medical-steps__item-top');
 
 accordeonBtns.forEach(accordeonBtn => {
     accordeonBtn.addEventListener('click', () => {
-        if(accordeonBtn.classList.contains('active')) {
-            accordeonBtn.classList.remove('active');
-            accordeonBtn.previousElementSibling.textContent = location.href.includes('/en/') ? 'unwrap': 'Развернуть';
+        if(accordeonBtn.lastElementChild.classList.contains('active')) {
+            accordeonBtn.lastElementChild.classList.remove('active');
+            accordeonBtn.lastElementChild .previousElementSibling.textContent = location.href.includes('/en/') ? 'unwrap': 'Развернуть';
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.classList.remove('show'));
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.style.maxHeight = 0);
             accordeonItemTops.forEach(accordeonItemTop => accordeonItemTop.style.marginBottom = 0);
         } else {
-            accordeonBtn.classList.add('active');
-            accordeonBtn.previousElementSibling.textContent = location.href.includes('/en/') ? 'wrap': 'Свернуть';
+            accordeonBtn.lastElementChild.classList.add('active');
+            accordeonBtn.lastElementChild.previousElementSibling.textContent = location.href.includes('/en/') ? 'wrap': 'Свернуть';
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.classList.add('show'));
             accordeonItemTexts.forEach(accordeonItemText => accordeonItemText.style.maxHeight = accordeonItemText.scrollHeight + 'px');
             accordeonItemTops.forEach(accordeonItemTop => accordeonItemTop.style.marginBottom = '20px');
