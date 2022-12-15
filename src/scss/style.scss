@@ -461,6 +461,7 @@ body {
 .btn--circle--green__wrapper-btn {
 	display: flex;
 	align-items: center;
+	color: $black;
 }
 
 .btn--circle--green__text {
@@ -515,6 +516,7 @@ body {
 		cursor: pointer;
 
 		&:last-child {
+			// color: #000;
 			margin-right: 0;
 		}
 	}
@@ -2150,6 +2152,7 @@ body {
 
 			&__text + &__wrapper-link {
 				margin-bottom: 13px;
+				// color: $black;
 			}
 
 			&__img {
