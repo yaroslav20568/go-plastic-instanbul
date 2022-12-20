@@ -723,6 +723,7 @@ body {
 		&-title {
 			font-size: 20px;
 			line-height: 1.2;
+			color: #000;
 		}
 		
 		&-link {
@@ -1942,11 +1943,11 @@ body {
 		&-top {
 			display: flex;
 			align-items: center;
-			// margin-bottom: 20px;
+			margin-bottom: 20px;
 		}
 
 		&-text {
-			max-height: 0;
+			// max-height: 0;
 			transition: .3s linear max-height;
 
 			&.show {
