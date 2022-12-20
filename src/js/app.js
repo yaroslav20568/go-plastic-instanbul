@@ -345,6 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
 if((document.querySelector('.medical-info-single') || document.querySelector('.medical-item')) && document.querySelector('.read-more__text')) {
     const readMoreTexts = document.querySelectorAll('.read-more__text');
     readMoreTexts.forEach((readMoreText) => {
+        readMoreText.previousElementSibling.style.marginBottom = '0';
         readMoreText.style.display = 'none';
     });
 
@@ -356,11 +357,13 @@ if((document.querySelector('.medical-info-single') || document.querySelector('.m
         if(!readMoreBtn.classList.contains('active')) {
             readMoreBtn.classList.add('active');
             readMoreTexts.forEach((readMoreText) => {
+                readMoreText.previousElementSibling.style.marginBottom = '19px';
                 readMoreText.style.display = 'block';
             });
         } else {
             readMoreBtn.classList.remove('active');
             readMoreTexts.forEach((readMoreText) => {
+                readMoreText.previousElementSibling.style.marginBottom = '0';
                 readMoreText.style.display = 'none';
             });
         }
